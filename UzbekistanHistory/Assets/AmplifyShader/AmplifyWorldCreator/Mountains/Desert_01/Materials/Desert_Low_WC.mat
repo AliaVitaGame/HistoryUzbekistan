@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Desert_Low_WC
+  m_Shader: {fileID: 4800000, guid: 9aff498ea135f7448b664eb6a1518661, type: 3}
+  m_ShaderKeywords: _SPLATMAPRBGONLY_ON
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpA:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpB:
+        m_Texture: {fileID: 2800000, guid: 6240e976f59e3b84ab3cf9413932032d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpG:
+        m_Texture: {fileID: 2800000, guid: 6240e976f59e3b84ab3cf9413932032d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpR:
+        m_Texture: {fileID: 2800000, guid: b256a1afa2c21094fbc276009f8eee3a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTexA:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTexB:
+        m_Texture: {fileID: 2800000, guid: 75c94ed4654b9384e901e03687683378, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTexG:
+        m_Texture: {fileID: 2800000, guid: 75c94ed4654b9384e901e03687683378, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTexR:
+        m_Texture: {fileID: 2800000, guid: 805693f8e82533f4fbad6ead377b89e2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SplatMap:
+        m_Texture: {fileID: 2800000, guid: e12ba2a0ecc519e44b48a87f1dd2eb63, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WorldNormal:
+        m_Texture: {fileID: 2800000, guid: 583d932fc91c93f418377f9f612aa908, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BrightnessA: 1
+    - _BrightnessB: 1
+    - _BrightnessG: 1
+    - _BrightnessR: 1
+    - _BumpScale: 1
+    - _ContrastA: 1
+    - _ContrastB: 1
+    - _ContrastG: 1
+    - _ContrastR: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0
+    - _GlossyReflections: 1
+    - _MaskIntensityA: 1
+    - _MaskIntensityB: 1.1
+    - _MaskIntensityG: 0.69
+    - _MaskIntensityR: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmContrastA: 1
+    - _SmContrastB: 1
+    - _SmContrastG: 1
+    - _SmContrastR: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SplatMapRBGOnly: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _WorldAmbientScale: 0.8
+    - _WorldEmissionScale: 0.7
+    - _WorldNormalScale: 0.7
+    - _ZWrite: 1
+    - __dirty: 0
+    m_Colors:
+    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _CoordinateA: {r: 1, g: 1, b: 0.5, a: 0}
+    - _CoordinateB: {r: 50, g: 1, b: 0, a: 0}
+    - _CoordinateG: {r: 15, g: 1, b: 0, a: 0}
+    - _CoordinateR: {r: 25, g: 1, b: 0, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _ShadeA: {r: 1, g: 1, b: 1, a: 0}
+    - _ShadeB: {r: 1, g: 1, b: 1, a: 0}
+    - _ShadeG: {r: 1, g: 1, b: 1, a: 0}
+    - _ShadeR: {r: 1, g: 1, b: 1, a: 0}
