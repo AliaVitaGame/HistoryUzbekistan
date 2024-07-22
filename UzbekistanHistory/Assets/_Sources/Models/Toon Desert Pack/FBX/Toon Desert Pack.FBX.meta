@@ -1,0 +1,575 @@
+fileFormatVersion: 2
+guid: 30b77f864de6cd247a173d0dc372bf4f
+timeCreated: 1466231491
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Cactus 01
+    100002: Knight
+    100004: //RootNode
+    100006: Cactus 02
+    100008: Cactus Short 01
+    100010: Cactus Short 02
+    100012: Cactus Tall 01
+    100014: Cactus Tall 010
+    100016: Cactus Tall 02
+    100018: Cactus Tall 03
+    100020: Cactus Tall 04
+    100022: Cactus Tall 05
+    100024: Cactus Tall 06
+    100026: Cactus Tall 07
+    100028: Cactus Tall 08
+    100030: Cactus Tall 09
+    100032: Cactus Tall 11
+    100034: Cactus Tall 12
+    100036: Cactus Tall 10
+    100038: Box002
+    100040: Bush 01
+    100042: Bush 02
+    100044: Rock Big 01
+    100046: Rock Big 02
+    100048: Rock Big 03
+    100050: Rock Big 04
+    100052: Rock Hill 01
+    100054: Rock Hill 02
+    100056: Rock Small 01
+    100058: Rock Small 02
+    100060: Rock Small 03
+    100062: Rock Stack 01
+    100064: Animal Ribcage
+    100066: Box003
+    100068: Animal Skull
+    100070: Clothes Rack 01
+    100072: Clothes Rack 02
+    100074: Clothes Rack 03
+    100076: Tent
+    100078: Urn 01
+    100080: Urn 02
+    100082: Urn 03
+    100084: Rock Mountain 01
+    100086: Rock Mountain 02
+    100088: Rock Mountain 03
+    100090: Rock Mountain 04
+    100092: Rock Mountain 05
+    100094: Box004
+    100096: Box005
+    100098: Box006
+    100100: Box007
+    100102: Cylinder001
+    100104: Portal
+    100106: Boat
+    100108: Dead Tree
+    100110: Rock Mountain 06
+    100112: Box Small
+    100114: Chest Normal
+    100116: Crate Food
+    100118: Hay Stack
+    100120: Wagon Open
+    100122: Wagon Shelter
+    100124: Crate Double
+    100126: Crate Rect
+    100128: Crate Square
+    100130: Fence 01
+    100132: Fence 02
+    100134: Flag
+    100136: Plank
+    100138: Barrel
+    100140: Abandoned 01
+    100142: Torch
+    100144: Castle Gate
+    100146: Ladder
+    100148: Tent Camp
+    100150: Box017
+    100152: Door
+    100154: House 01
+    100156: House 02
+    100158: House Connector
+    100160: Town Gate
+    100162: Town Wall
+    100164: Town Wall Connect
+    100166: Shelter
+    100168: House Tower
+    100170: Door 02
+    100172: House 03
+    100174: Blacksmith Tools
+    100176: Pot Rack
+    100178: Sword Rack
+    100180: Book Shelf
+    100182: Crate Food 01
+    100184: Crate Food 02
+    100186: Crate Food 03
+    100188: Crate Food 04
+    100190: Marketplace 01
+    100192: Marketplace 02
+    100194: Marketplace 03
+    100196: Potion Table
+    400000: Cactus 01
+    400002: Knight
+    400004: //RootNode
+    400006: Cactus 02
+    400008: Cactus Short 01
+    400010: Cactus Short 02
+    400012: Cactus Tall 01
+    400014: Cactus Tall 010
+    400016: Cactus Tall 02
+    400018: Cactus Tall 03
+    400020: Cactus Tall 04
+    400022: Cactus Tall 05
+    400024: Cactus Tall 06
+    400026: Cactus Tall 07
+    400028: Cactus Tall 08
+    400030: Cactus Tall 09
+    400032: Cactus Tall 11
+    400034: Cactus Tall 12
+    400036: Cactus Tall 10
+    400038: Box002
+    400040: Bush 01
+    400042: Bush 02
+    400044: Rock Big 01
+    400046: Rock Big 02
+    400048: Rock Big 03
+    400050: Rock Big 04
+    400052: Rock Hill 01
+    400054: Rock Hill 02
+    400056: Rock Small 01
+    400058: Rock Small 02
+    400060: Rock Small 03
+    400062: Rock Stack 01
+    400064: Animal Ribcage
+    400066: Box003
+    400068: Animal Skull
+    400070: Clothes Rack 01
+    400072: Clothes Rack 02
+    400074: Clothes Rack 03
+    400076: Tent
+    400078: Urn 01
+    400080: Urn 02
+    400082: Urn 03
+    400084: Rock Mountain 01
+    400086: Rock Mountain 02
+    400088: Rock Mountain 03
+    400090: Rock Mountain 04
+    400092: Rock Mountain 05
+    400094: Box004
+    400096: Box005
+    400098: Box006
+    400100: Box007
+    400102: Cylinder001
+    400104: Portal
+    400106: Boat
+    400108: Dead Tree
+    400110: Rock Mountain 06
+    400112: Box Small
+    400114: Chest Normal
+    400116: Crate Food
+    400118: Hay Stack
+    400120: Wagon Open
+    400122: Wagon Shelter
+    400124: Crate Double
+    400126: Crate Rect
+    400128: Crate Square
+    400130: Fence 01
+    400132: Fence 02
+    400134: Flag
+    400136: Plank
+    400138: Barrel
+    400140: Abandoned 01
+    400142: Torch
+    400144: Castle Gate
+    400146: Ladder
+    400148: Tent Camp
+    400150: Box017
+    400152: Door
+    400154: House 01
+    400156: House 02
+    400158: House Connector
+    400160: Town Gate
+    400162: Town Wall
+    400164: Town Wall Connect
+    400166: Shelter
+    400168: House Tower
+    400170: Door 02
+    400172: House 03
+    400174: Blacksmith Tools
+    400176: Pot Rack
+    400178: Sword Rack
+    400180: Book Shelf
+    400182: Crate Food 01
+    400184: Crate Food 02
+    400186: Crate Food 03
+    400188: Crate Food 04
+    400190: Marketplace 01
+    400192: Marketplace 02
+    400194: Marketplace 03
+    400196: Potion Table
+    2300000: Cactus 01
+    2300002: Knight
+    2300004: Cactus 02
+    2300006: Cactus Short 01
+    2300008: Cactus Short 02
+    2300010: Cactus Tall 01
+    2300012: Cactus Tall 010
+    2300014: Cactus Tall 02
+    2300016: Cactus Tall 03
+    2300018: Cactus Tall 04
+    2300020: Cactus Tall 05
+    2300022: Cactus Tall 06
+    2300024: Cactus Tall 07
+    2300026: Cactus Tall 08
+    2300028: Cactus Tall 09
+    2300030: Cactus Tall 11
+    2300032: Cactus Tall 12
+    2300034: Cactus Tall 10
+    2300036: Box002
+    2300038: Bush 01
+    2300040: Bush 02
+    2300042: Rock Big 01
+    2300044: Rock Big 02
+    2300046: Rock Big 03
+    2300048: Rock Big 04
+    2300050: Rock Hill 01
+    2300052: Rock Hill 02
+    2300054: Rock Small 01
+    2300056: Rock Small 02
+    2300058: Rock Small 03
+    2300060: Rock Stack 01
+    2300062: Animal Ribcage
+    2300064: Box003
+    2300066: Animal Skull
+    2300068: Clothes Rack 01
+    2300070: Clothes Rack 02
+    2300072: Clothes Rack 03
+    2300074: Tent
+    2300076: Urn 01
+    2300078: Urn 02
+    2300080: Urn 03
+    2300082: Rock Mountain 01
+    2300084: Rock Mountain 02
+    2300086: Rock Mountain 03
+    2300088: Rock Mountain 04
+    2300090: Rock Mountain 05
+    2300092: Box004
+    2300094: Box005
+    2300096: Box006
+    2300098: Box007
+    2300100: Cylinder001
+    2300102: Portal
+    2300104: Boat
+    2300106: Dead Tree
+    2300108: Rock Mountain 06
+    2300110: Box Small
+    2300112: Chest Normal
+    2300114: Crate Food
+    2300116: Hay Stack
+    2300118: Wagon Open
+    2300120: Wagon Shelter
+    2300122: Crate Double
+    2300124: Crate Rect
+    2300126: Crate Square
+    2300128: Fence 01
+    2300130: Fence 02
+    2300132: Flag
+    2300134: Plank
+    2300136: Barrel
+    2300138: Abandoned 01
+    2300140: Torch
+    2300142: Castle Gate
+    2300144: Ladder
+    2300146: Tent Camp
+    2300148: Box017
+    2300150: Door
+    2300152: House 01
+    2300154: House 02
+    2300156: House Connector
+    2300158: Town Gate
+    2300160: Town Wall
+    2300162: Town Wall Connect
+    2300164: Shelter
+    2300166: House Tower
+    2300168: Door 02
+    2300170: House 03
+    2300172: Blacksmith Tools
+    2300174: Pot Rack
+    2300176: Sword Rack
+    2300178: Book Shelf
+    2300180: Crate Food 01
+    2300182: Crate Food 02
+    2300184: Crate Food 03
+    2300186: Crate Food 04
+    2300188: Marketplace 01
+    2300190: Marketplace 02
+    2300192: Marketplace 03
+    2300194: Potion Table
+    3300000: Cactus 01
+    3300002: Knight
+    3300004: Cactus 02
+    3300006: Cactus Short 01
+    3300008: Cactus Short 02
+    3300010: Cactus Tall 01
+    3300012: Cactus Tall 010
+    3300014: Cactus Tall 02
+    3300016: Cactus Tall 03
+    3300018: Cactus Tall 04
+    3300020: Cactus Tall 05
+    3300022: Cactus Tall 06
+    3300024: Cactus Tall 07
+    3300026: Cactus Tall 08
+    3300028: Cactus Tall 09
+    3300030: Cactus Tall 11
+    3300032: Cactus Tall 12
+    3300034: Cactus Tall 10
+    3300036: Box002
+    3300038: Bush 01
+    3300040: Bush 02
+    3300042: Rock Big 01
+    3300044: Rock Big 02
+    3300046: Rock Big 03
+    3300048: Rock Big 04
+    3300050: Rock Hill 01
+    3300052: Rock Hill 02
+    3300054: Rock Small 01
+    3300056: Rock Small 02
+    3300058: Rock Small 03
+    3300060: Rock Stack 01
+    3300062: Animal Ribcage
+    3300064: Box003
+    3300066: Animal Skull
+    3300068: Clothes Rack 01
+    3300070: Clothes Rack 02
+    3300072: Clothes Rack 03
+    3300074: Tent
+    3300076: Urn 01
+    3300078: Urn 02
+    3300080: Urn 03
+    3300082: Rock Mountain 01
+    3300084: Rock Mountain 02
+    3300086: Rock Mountain 03
+    3300088: Rock Mountain 04
+    3300090: Rock Mountain 05
+    3300092: Box004
+    3300094: Box005
+    3300096: Box006
+    3300098: Box007
+    3300100: Cylinder001
+    3300102: Portal
+    3300104: Boat
+    3300106: Dead Tree
+    3300108: Rock Mountain 06
+    3300110: Box Small
+    3300112: Chest Normal
+    3300114: Crate Food
+    3300116: Hay Stack
+    3300118: Wagon Open
+    3300120: Wagon Shelter
+    3300122: Crate Double
+    3300124: Crate Rect
+    3300126: Crate Square
+    3300128: Fence 01
+    3300130: Fence 02
+    3300132: Flag
+    3300134: Plank
+    3300136: Barrel
+    3300138: Abandoned 01
+    3300140: Torch
+    3300142: Castle Gate
+    3300144: Ladder
+    3300146: Tent Camp
+    3300148: Box017
+    3300150: Door
+    3300152: House 01
+    3300154: House 02
+    3300156: House Connector
+    3300158: Town Gate
+    3300160: Town Wall
+    3300162: Town Wall Connect
+    3300164: Shelter
+    3300166: House Tower
+    3300168: Door 02
+    3300170: House 03
+    3300172: Blacksmith Tools
+    3300174: Pot Rack
+    3300176: Sword Rack
+    3300178: Book Shelf
+    3300180: Crate Food 01
+    3300182: Crate Food 02
+    3300184: Crate Food 03
+    3300186: Crate Food 04
+    3300188: Marketplace 01
+    3300190: Marketplace 02
+    3300192: Marketplace 03
+    3300194: Potion Table
+    4300000: Knight
+    4300002: Cactus 01
+    4300004: Cactus 02
+    4300006: Cactus Short 01
+    4300008: Cactus Short 02
+    4300010: Cactus Tall 01
+    4300012: Cactus Tall 02
+    4300014: Cactus Tall 03
+    4300016: Cactus Tall 05
+    4300018: Cactus Tall 04
+    4300020: Cactus Tall 06
+    4300022: Cactus Tall 07
+    4300024: Cactus Tall 08
+    4300026: Cactus Tall 09
+    4300028: Cactus Tall 010
+    4300030: Cactus Tall 11
+    4300032: Cactus Tall 12
+    4300034: Cactus Tall 10
+    4300036: Rock Big 03
+    4300038: Box002
+    4300040: Rock Big 02
+    4300042: Rock Big 01
+    4300044: Rock Big 04
+    4300046: Rock Stack 01
+    4300048: Rock Small 03
+    4300050: Rock Small 01
+    4300052: Rock Small 02
+    4300054: Rock Hill 01
+    4300056: Rock Hill 02
+    4300058: Bush 01
+    4300060: Bush 02
+    4300062: Animal Ribcage
+    4300064: Box003
+    4300066: Animal Skull
+    4300068: Tent
+    4300070: Clothes Rack 02
+    4300072: Clothes Rack 01
+    4300074: Clothes Rack 03
+    4300076: Urn 01
+    4300078: Urn 02
+    4300080: Urn 03
+    4300082: Rock Mountain 03
+    4300084: Rock Mountain 01
+    4300086: Rock Mountain 04
+    4300088: Rock Mountain 02
+    4300090: Rock Mountain 05
+    4300092: Box004
+    4300094: Box005
+    4300096: Box006
+    4300098: Cylinder001
+    4300100: Box007
+    4300102: Portal
+    4300104: Rock Mountain 06
+    4300106: Boat
+    4300108: Dead Tree
+    4300110: Wagon Open
+    4300112: Hay Stack
+    4300114: Chest Normal
+    4300116: Crate Food
+    4300118: Box Small
+    4300120: Wagon Shelter
+    4300122: Flag
+    4300124: Fence 01
+    4300126: Fence 02
+    4300128: Crate Rect
+    4300130: Crate Square
+    4300132: Crate Double
+    4300134: Plank
+    4300136: Barrel
+    4300138: Torch
+    4300140: Abandoned 01
+    4300142: Castle Gate
+    4300144: Ladder
+    4300146: Tent Camp
+    4300148: Town Gate
+    4300150: Town Wall
+    4300152: Town Wall Connect
+    4300154: House 02
+    4300156: House 01
+    4300158: Door
+    4300160: House Connector
+    4300162: Box017
+    4300164: Shelter
+    4300166: House Tower
+    4300168: House 03
+    4300170: Door 02
+    4300172: Sword Rack
+    4300174: Pot Rack
+    4300176: Blacksmith Tools
+    4300178: Crate Food 01
+    4300180: Crate Food 02
+    4300182: Crate Food 03
+    4300184: Crate Food 04
+    4300186: Marketplace 01
+    4300188: Marketplace 02
+    4300190: Marketplace 03
+    4300192: Potion Table
+    4300194: Book Shelf
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
