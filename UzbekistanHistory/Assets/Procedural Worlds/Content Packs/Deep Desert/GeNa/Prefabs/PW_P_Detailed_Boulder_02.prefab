@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2567874090926058427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2567874090926058426}
+  - component: {fileID: -5529214656618706249}
+  m_Layer: 0
+  m_Name: PW_P_Detailed_Boulder_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2567874090926058426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2567874090926058427}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3120629455226901087}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5529214656618706249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2567874090926058427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e93767df38a24ca192d70098391f3d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_destroyAfterSpawn: 1
+  m_unpackPrefab: 0
+  m_snapToGround: 1
+  m_conformToSlope: 0
+  m_sameOScale: 1
+  m_minScale: {x: 1, y: 1, z: 1}
+  m_maxScale: {x: 1, y: 1, z: 1}
+  m_minOffset: {x: 0, y: -0.15, z: 0}
+  m_maxOffset: {x: 0, y: -0.15, z: 0}
+  m_minRotation: {x: 0, y: 0, z: 0}
+  m_maxRotation: {x: 0, y: 0, z: 0}
+--- !u!1001 &282891469070614773
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2567874090926058426}
+    m_Modifications:
+    - target: {fileID: 2928390609479324330, guid: ad4e6848ad2a096438671e049489fca9, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928390609479324330, guid: ad4e6848ad2a096438671e049489fca9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928390609479324330, guid: ad4e6848ad2a096438671e049489fca9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928390609479324330, guid: ad4e6848ad2a096438671e049489fca9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928390609479324330, guid: ad4e6848ad2a096438671e049489fca9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928390609479324330, guid: ad4e6848ad2a096438671e049489fca9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928390609479324330, guid: ad4e6848ad2a096438671e049489fca9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928390609479324330, guid: ad4e6848ad2a096438671e049489fca9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928390609479324330, guid: ad4e6848ad2a096438671e049489fca9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928390609479324330, guid: ad4e6848ad2a096438671e049489fca9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928390609479324330, guid: ad4e6848ad2a096438671e049489fca9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5466073827354548483, guid: ad4e6848ad2a096438671e049489fca9, type: 3}
+      propertyPath: m_Name
+      value: PW_P_Detailed_RockBoulder_02
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ad4e6848ad2a096438671e049489fca9, type: 3}
+--- !u!4 &3120629455226901087 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2928390609479324330, guid: ad4e6848ad2a096438671e049489fca9, type: 3}
+  m_PrefabInstance: {fileID: 282891469070614773}
+  m_PrefabAsset: {fileID: 0}

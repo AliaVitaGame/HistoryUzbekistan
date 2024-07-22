@@ -1,0 +1,388 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c477de684ee10c4082f9fddf19a75ce, type: 3}
+  m_Name: Deep Desert Palette
+  m_EditorClassIdentifier: 
+  m_paletteEntryIDCount: -2147483559
+  m_paletteEntries:
+  - m_name: PW_DD_boulder_01
+    m_id: 0
+    m_guid: 
+    m_object: {fileID: 1711396448727624961, guid: 47ad3908d220a8947a36c98f5e1a6715, type: 3}
+  - m_name: PW_DD_boulder_02
+    m_id: 0
+    m_guid: 
+    m_object: {fileID: 808738863182994924, guid: 6e404e304e4bf5a41962993db06345bc, type: 3}
+  - m_name: PW_DD_boulder_03
+    m_id: 0
+    m_guid: 
+    m_object: {fileID: 808738863182994924, guid: 332a43eb0cded064597f0614c676c1b6, type: 3}
+  - m_name: PW_DD_boulder_04
+    m_id: 0
+    m_guid: 
+    m_object: {fileID: 5691380824512908164, guid: bb0f677e096d75549b178559d94bee00, type: 3}
+  - m_name: PW_DD_formation_boulders_01
+    m_id: -2147483647
+    m_guid: 47ad3908d220a8947a36c98f5e1a6715
+    m_object: {fileID: 1711396448727624961, guid: 47ad3908d220a8947a36c98f5e1a6715, type: 3}
+  - m_name: PW_DD_formation_boulders_02
+    m_id: -2147483646
+    m_guid: 6e404e304e4bf5a41962993db06345bc
+    m_object: {fileID: 808738863182994924, guid: 6e404e304e4bf5a41962993db06345bc, type: 3}
+  - m_name: PW_DD_formation_boulders_03
+    m_id: -2147483645
+    m_guid: 332a43eb0cded064597f0614c676c1b6
+    m_object: {fileID: 808738863182994924, guid: 332a43eb0cded064597f0614c676c1b6, type: 3}
+  - m_name: PW_DD_formation_boulders_04
+    m_id: -2147483644
+    m_guid: bb0f677e096d75549b178559d94bee00
+    m_object: {fileID: 5691380824512908164, guid: bb0f677e096d75549b178559d94bee00, type: 3}
+  - m_name: PW_DD_formaions_boulders
+    m_id: -2147483643
+    m_guid: 47b3d7d71453bab4c8f449d8b09b15e0
+    m_object: {fileID: 37582355570543842, guid: 47b3d7d71453bab4c8f449d8b09b15e0, type: 3}
+  - m_name: pwub_builtin_1_c5
+    m_id: -2147483642
+    m_guid: 8562e5af4cc78dd488059285d0c642d1
+    m_object: {fileID: 2800000, guid: 8562e5af4cc78dd488059285d0c642d1, type: 3}
+  - m_name: pwub_builtin_2_c5
+    m_id: -2147483641
+    m_guid: f77fc97af49c16c4cb3927a1d0462e79
+    m_object: {fileID: 2800000, guid: f77fc97af49c16c4cb3927a1d0462e79, type: 3}
+  - m_name: pwub_builtin_3_c5
+    m_id: -2147483640
+    m_guid: 9cd761b0a0aa72648a348e5ebfd6e86b
+    m_object: {fileID: 2800000, guid: 9cd761b0a0aa72648a348e5ebfd6e86b, type: 3}
+  - m_name: pwub_builtin_4_c5
+    m_id: -2147483639
+    m_guid: 3d320e63902a22c4a936a386d3b82942
+    m_object: {fileID: 2800000, guid: 3d320e63902a22c4a936a386d3b82942, type: 3}
+  - m_name: pwub_builtin_5_c5
+    m_id: -2147483638
+    m_guid: d655b3415e9b4a349bdfff62e290f6a0
+    m_object: {fileID: 2800000, guid: d655b3415e9b4a349bdfff62e290f6a0, type: 3}
+  - m_name: pwub_builtin_6_c5
+    m_id: -2147483637
+    m_guid: 86ce52cdd27d0214786d1ffd6923fff6
+    m_object: {fileID: 2800000, guid: 86ce52cdd27d0214786d1ffd6923fff6, type: 3}
+  - m_name: pwub_builtin_7_c5
+    m_id: -2147483636
+    m_guid: 9236ebf756af8954193c9c44e05ba09e
+    m_object: {fileID: 2800000, guid: 9236ebf756af8954193c9c44e05ba09e, type: 3}
+  - m_name: pwub_builtin_8_c5
+    m_id: -2147483635
+    m_guid: a913d21bd6330f64bae5eb7e5fbd830b
+    m_object: {fileID: 2800000, guid: a913d21bd6330f64bae5eb7e5fbd830b, type: 3}
+  - m_name: pwub_builtin_9_c5
+    m_id: -2147483634
+    m_guid: 7fd839b086d4a844d83cbe9490683855
+    m_object: {fileID: 2800000, guid: 7fd839b086d4a844d83cbe9490683855, type: 3}
+  - m_name: pwub_builtin_10_c5
+    m_id: -2147483633
+    m_guid: 9fd32fab18db93d4bab18a1fb6923819
+    m_object: {fileID: 2800000, guid: 9fd32fab18db93d4bab18a1fb6923819, type: 3}
+  - m_name: pwub_builtin_11_c5
+    m_id: -2147483632
+    m_guid: 05c00cf657919e346bebf9e153c56e66
+    m_object: {fileID: 2800000, guid: 05c00cf657919e346bebf9e153c56e66, type: 3}
+  - m_name: pwub_builtin_12_c5
+    m_id: -2147483631
+    m_guid: 2fbda824cdc093e4c9951a5f273f6554
+    m_object: {fileID: 2800000, guid: 2fbda824cdc093e4c9951a5f273f6554, type: 3}
+  - m_name: pwub_builtin_13_c5
+    m_id: -2147483630
+    m_guid: 27e1a0b4841c0b34eb51ed3e21e50691
+    m_object: {fileID: 2800000, guid: 27e1a0b4841c0b34eb51ed3e21e50691, type: 3}
+  - m_name: pwub_builtin_14_c5
+    m_id: -2147483629
+    m_guid: 4a374978ee6c9ab46a39372d609f7e1e
+    m_object: {fileID: 2800000, guid: 4a374978ee6c9ab46a39372d609f7e1e, type: 3}
+  - m_name: pwub_builtin_15_c5
+    m_id: -2147483628
+    m_guid: 128216f3a20cb73458440e12e657db4b
+    m_object: {fileID: 2800000, guid: 128216f3a20cb73458440e12e657db4b, type: 3}
+  - m_name: pwub_builtin_16_c5
+    m_id: -2147483627
+    m_guid: 410d50fd32c308c46a95f502d3c7c2ff
+    m_object: {fileID: 2800000, guid: 410d50fd32c308c46a95f502d3c7c2ff, type: 3}
+  - m_name: pwub_builtin_17_c5
+    m_id: -2147483626
+    m_guid: cc056045a1782ac4a8c08bdce66d49ed
+    m_object: {fileID: 2800000, guid: cc056045a1782ac4a8c08bdce66d49ed, type: 3}
+  - m_name: pwub_builtin_18_c5
+    m_id: -2147483625
+    m_guid: b04e2e83ee1283545a02e1bab08989ba
+    m_object: {fileID: 2800000, guid: b04e2e83ee1283545a02e1bab08989ba, type: 3}
+  - m_name: pwub_builtin_19_c5
+    m_id: -2147483624
+    m_guid: e24fd533463218644ae0bb81977c5e99
+    m_object: {fileID: 2800000, guid: e24fd533463218644ae0bb81977c5e99, type: 3}
+  - m_name: pwub_builtin_20_c5
+    m_id: -2147483623
+    m_guid: 738922d98c7b6f242bcd7f511badbef5
+    m_object: {fileID: 2800000, guid: 738922d98c7b6f242bcd7f511badbef5, type: 3}
+  - m_name: PW_DD_boulder_01
+    m_id: -2147483622
+    m_guid: 23a592ee1df37a84f925f0e7a07a6fa1
+    m_object: {fileID: 769105544188299738, guid: 23a592ee1df37a84f925f0e7a07a6fa1, type: 3}
+  - m_name: pwub_builtin_1_c5
+    m_id: -2147483621
+    m_guid: 8562e5af4cc78dd488059285d0c642d1
+    m_object: {fileID: 2800000, guid: 8562e5af4cc78dd488059285d0c642d1, type: 3}
+  - m_name: pwub_builtin_2_c5
+    m_id: -2147483620
+    m_guid: f77fc97af49c16c4cb3927a1d0462e79
+    m_object: {fileID: 2800000, guid: f77fc97af49c16c4cb3927a1d0462e79, type: 3}
+  - m_name: pwub_builtin_3_c5
+    m_id: -2147483619
+    m_guid: 9cd761b0a0aa72648a348e5ebfd6e86b
+    m_object: {fileID: 2800000, guid: 9cd761b0a0aa72648a348e5ebfd6e86b, type: 3}
+  - m_name: pwub_builtin_4_c5
+    m_id: -2147483618
+    m_guid: 3d320e63902a22c4a936a386d3b82942
+    m_object: {fileID: 2800000, guid: 3d320e63902a22c4a936a386d3b82942, type: 3}
+  - m_name: pwub_builtin_5_c5
+    m_id: -2147483617
+    m_guid: d655b3415e9b4a349bdfff62e290f6a0
+    m_object: {fileID: 2800000, guid: d655b3415e9b4a349bdfff62e290f6a0, type: 3}
+  - m_name: pwub_builtin_6_c5
+    m_id: -2147483616
+    m_guid: 86ce52cdd27d0214786d1ffd6923fff6
+    m_object: {fileID: 2800000, guid: 86ce52cdd27d0214786d1ffd6923fff6, type: 3}
+  - m_name: pwub_builtin_7_c5
+    m_id: -2147483615
+    m_guid: 9236ebf756af8954193c9c44e05ba09e
+    m_object: {fileID: 2800000, guid: 9236ebf756af8954193c9c44e05ba09e, type: 3}
+  - m_name: pwub_builtin_8_c5
+    m_id: -2147483614
+    m_guid: a913d21bd6330f64bae5eb7e5fbd830b
+    m_object: {fileID: 2800000, guid: a913d21bd6330f64bae5eb7e5fbd830b, type: 3}
+  - m_name: pwub_builtin_9_c5
+    m_id: -2147483613
+    m_guid: 7fd839b086d4a844d83cbe9490683855
+    m_object: {fileID: 2800000, guid: 7fd839b086d4a844d83cbe9490683855, type: 3}
+  - m_name: pwub_builtin_10_c5
+    m_id: -2147483612
+    m_guid: 9fd32fab18db93d4bab18a1fb6923819
+    m_object: {fileID: 2800000, guid: 9fd32fab18db93d4bab18a1fb6923819, type: 3}
+  - m_name: pwub_builtin_11_c5
+    m_id: -2147483611
+    m_guid: 05c00cf657919e346bebf9e153c56e66
+    m_object: {fileID: 2800000, guid: 05c00cf657919e346bebf9e153c56e66, type: 3}
+  - m_name: pwub_builtin_12_c5
+    m_id: -2147483610
+    m_guid: 2fbda824cdc093e4c9951a5f273f6554
+    m_object: {fileID: 2800000, guid: 2fbda824cdc093e4c9951a5f273f6554, type: 3}
+  - m_name: pwub_builtin_13_c5
+    m_id: -2147483609
+    m_guid: 27e1a0b4841c0b34eb51ed3e21e50691
+    m_object: {fileID: 2800000, guid: 27e1a0b4841c0b34eb51ed3e21e50691, type: 3}
+  - m_name: pwub_builtin_14_c5
+    m_id: -2147483608
+    m_guid: 4a374978ee6c9ab46a39372d609f7e1e
+    m_object: {fileID: 2800000, guid: 4a374978ee6c9ab46a39372d609f7e1e, type: 3}
+  - m_name: pwub_builtin_15_c5
+    m_id: -2147483607
+    m_guid: 128216f3a20cb73458440e12e657db4b
+    m_object: {fileID: 2800000, guid: 128216f3a20cb73458440e12e657db4b, type: 3}
+  - m_name: pwub_builtin_16_c5
+    m_id: -2147483606
+    m_guid: 410d50fd32c308c46a95f502d3c7c2ff
+    m_object: {fileID: 2800000, guid: 410d50fd32c308c46a95f502d3c7c2ff, type: 3}
+  - m_name: pwub_builtin_17_c5
+    m_id: -2147483605
+    m_guid: cc056045a1782ac4a8c08bdce66d49ed
+    m_object: {fileID: 2800000, guid: cc056045a1782ac4a8c08bdce66d49ed, type: 3}
+  - m_name: pwub_builtin_18_c5
+    m_id: -2147483604
+    m_guid: b04e2e83ee1283545a02e1bab08989ba
+    m_object: {fileID: 2800000, guid: b04e2e83ee1283545a02e1bab08989ba, type: 3}
+  - m_name: pwub_builtin_19_c5
+    m_id: -2147483603
+    m_guid: e24fd533463218644ae0bb81977c5e99
+    m_object: {fileID: 2800000, guid: e24fd533463218644ae0bb81977c5e99, type: 3}
+  - m_name: pwub_builtin_20_c5
+    m_id: -2147483602
+    m_guid: 738922d98c7b6f242bcd7f511badbef5
+    m_object: {fileID: 2800000, guid: 738922d98c7b6f242bcd7f511badbef5, type: 3}
+  - m_name: PW_DD_formation_spire_01
+    m_id: -2147483601
+    m_guid: 2646af60b5b98884798a86ed533d33f3
+    m_object: {fileID: 3736795922875536330, guid: 2646af60b5b98884798a86ed533d33f3, type: 3}
+  - m_name: PW_DD_formation_spire_02
+    m_id: -2147483600
+    m_guid: 8c907ef8b3b2ebd4c8ac9362587b7e50
+    m_object: {fileID: 147153527376577231, guid: 8c907ef8b3b2ebd4c8ac9362587b7e50, type: 3}
+  - m_name: PW_DD_formation_cliff_01
+    m_id: -2147483599
+    m_guid: a7b27db83b86b4c4fa9bc4e9ca9815e6
+    m_object: {fileID: 274392954644984808, guid: a7b27db83b86b4c4fa9bc4e9ca9815e6, type: 3}
+  - m_name: PW_DD_formation_cliff_02
+    m_id: -2147483598
+    m_guid: e36598ecf2a9fb24889f446a82e95203
+    m_object: {fileID: 3497230850086803777, guid: e36598ecf2a9fb24889f446a82e95203, type: 3}
+  - m_name: PW_DD_formation_cliff_03
+    m_id: -2147483597
+    m_guid: 67802241a7b865e4fa930a4953d19b61
+    m_object: {fileID: 3740974186825559949, guid: 67802241a7b865e4fa930a4953d19b61, type: 3}
+  - m_name: PW_DD_formation_pebbles_01
+    m_id: -2147483596
+    m_guid: 32eed1c42d7784445af97506f2a30ea2
+    m_object: {fileID: 5767995373081784987, guid: 32eed1c42d7784445af97506f2a30ea2, type: 3}
+  - m_name: PW_DD_formation_pebbles_02
+    m_id: -2147483595
+    m_guid: 80a8751d7acd57143b7d3b6d4fa4c73d
+    m_object: {fileID: 3780855746829341415, guid: 80a8751d7acd57143b7d3b6d4fa4c73d, type: 3}
+  - m_name: PW_DD_stone_02
+    m_id: -2147483594
+    m_guid: 952bc325228831343898df9b79d59aa3
+    m_object: {fileID: 4062600583706719522, guid: 952bc325228831343898df9b79d59aa3, type: 3}
+  - m_name: PW_DD_stone_01
+    m_id: -2147483593
+    m_guid: b12168b79f984ce4b86f64ee063df18b
+    m_object: {fileID: 6288935753487478142, guid: b12168b79f984ce4b86f64ee063df18b, type: 3}
+  - m_name: PW_DD_shrub_01
+    m_id: -2147483592
+    m_guid: 3f30baf0237daf7468814a2f0bbd8aa5
+    m_object: {fileID: 5907982791336365972, guid: 3f30baf0237daf7468814a2f0bbd8aa5, type: 3}
+  - m_name: PW_DD_shrub_02
+    m_id: -2147483591
+    m_guid: 7c4365906f88998439082eb9a9a2015e
+    m_object: {fileID: 5907982791336365972, guid: 7c4365906f88998439082eb9a9a2015e, type: 3}
+  - m_name: PW_DD_shrub_03_dead
+    m_id: -2147483590
+    m_guid: a2ec11d7004ecca4aad10eb6bd86b1d8
+    m_object: {fileID: 5907982791336365972, guid: a2ec11d7004ecca4aad10eb6bd86b1d8, type: 3}
+  - m_name: PW_DD_boulder_02
+    m_id: -2147483589
+    m_guid: 0120e8b2150b86041b24ef280fef0d01
+    m_object: {fileID: 5466073827354548483, guid: 0120e8b2150b86041b24ef280fef0d01, type: 3}
+  - m_name: PW_DD_pillar_02
+    m_id: -2147483588
+    m_guid: dd63a3c14d24e26488dbee7f7523e562
+    m_object: {fileID: 5578826614717856412, guid: dd63a3c14d24e26488dbee7f7523e562, type: 3}
+  - m_name: PW_P_Boulder_01
+    m_id: -2147483587
+    m_guid: 5643754126caec84a8a99f243a9c873e
+    m_object: {fileID: 6149415311662775504, guid: 5643754126caec84a8a99f243a9c873e, type: 3}
+  - m_name: PW_P_Boulder_02
+    m_id: -2147483586
+    m_guid: 91497f6a7453e834a870b1fb4ab2a9bf
+    m_object: {fileID: 2567874090926058427, guid: 91497f6a7453e834a870b1fb4ab2a9bf, type: 3}
+  - m_name: PW_P_Pillar_02
+    m_id: -2147483585
+    m_guid: 5b340d9a472819e45bdb364a1ac3d5b4
+    m_object: {fileID: 2104711439047851599, guid: 5b340d9a472819e45bdb364a1ac3d5b4, type: 3}
+  - m_name: PW_P_Stone_01
+    m_id: -2147483584
+    m_guid: 495a6beba9efaeb4d8333434bebf56df
+    m_object: {fileID: 8629089164768658062, guid: 495a6beba9efaeb4d8333434bebf56df, type: 3}
+  - m_name: PW_P_Stone_02
+    m_id: -2147483583
+    m_guid: 4bfcf6a4d016a9140b21d69e4b271a7a
+    m_object: {fileID: 297024350152263031, guid: 4bfcf6a4d016a9140b21d69e4b271a7a, type: 3}
+  - m_name: PW_P_pillar_01
+    m_id: -2147483582
+    m_guid: 425e4224b75fbea4b926a7459d88b88e
+    m_object: {fileID: 996137797733805769, guid: 425e4224b75fbea4b926a7459d88b88e, type: 3}
+  - m_name: PW_P_Bush_01
+    m_id: -2147483581
+    m_guid: 1d41749dfaafac34e96f514cacf87b6d
+    m_object: {fileID: 1184847474989860902, guid: 1d41749dfaafac34e96f514cacf87b6d, type: 3}
+  - m_name: PW_P_Agave_01
+    m_id: -2147483580
+    m_guid: 36cf8b5ae3e26f846a59c35924520fde
+    m_object: {fileID: 8647069338928926739, guid: 36cf8b5ae3e26f846a59c35924520fde, type: 3}
+  - m_name: PW_P_CactusCluster_01
+    m_id: -2147483579
+    m_guid: dcafaf198c4aba24ead52bcdd2ff9070
+    m_object: {fileID: 3191886857387738821, guid: dcafaf198c4aba24ead52bcdd2ff9070, type: 3}
+  - m_name: PW_P_Cactus_01
+    m_id: -2147483578
+    m_guid: 0f84ed1f3988094418e035612523081d
+    m_object: {fileID: 1788523767292901629, guid: 0f84ed1f3988094418e035612523081d, type: 3}
+  - m_name: PW_P_Cactus_02
+    m_id: -2147483577
+    m_guid: 1c49e90671e48c34dabf63eaa3e6186c
+    m_object: {fileID: 1323242721697377249, guid: 1c49e90671e48c34dabf63eaa3e6186c, type: 3}
+  - m_name: PW_P_Cactus_03
+    m_id: -2147483576
+    m_guid: 716b596bf3904f54cb99f6a690d9e25f
+    m_object: {fileID: 2878501091005820654, guid: 716b596bf3904f54cb99f6a690d9e25f, type: 3}
+  - m_name: PW_P_Cladodes_01
+    m_id: -2147483575
+    m_guid: 7fe87da31cae66f47ae90184e67d28d2
+    m_object: {fileID: 2155080116920555393, guid: 7fe87da31cae66f47ae90184e67d28d2, type: 3}
+  - m_name: Spawner - Single Noise Plant
+    m_id: -2147483574
+    m_guid: fc6157d2f082d864d9d3e8c69d9db6dd
+    m_object: {fileID: 8805361280796835021, guid: fc6157d2f082d864d9d3e8c69d9db6dd, type: 3}
+  - m_name: PW_P_Detailed_Agave_01
+    m_id: -2147483573
+    m_guid: f4545ffb556dff346a6fbb647e7babb6
+    m_object: {fileID: 8647069338928926739, guid: f4545ffb556dff346a6fbb647e7babb6, type: 3}
+  - m_name: PW_P_Detailed_Bush_01
+    m_id: -2147483572
+    m_guid: e1bc682ef45676142ae97b87db4cdde2
+    m_object: {fileID: 1184847474989860902, guid: e1bc682ef45676142ae97b87db4cdde2, type: 3}
+  - m_name: PW_P_Detailed_Cactus_01
+    m_id: -2147483571
+    m_guid: 1edfab33db0505641a21038b6517efc3
+    m_object: {fileID: 1788523767292901629, guid: 1edfab33db0505641a21038b6517efc3, type: 3}
+  - m_name: PW_P_Detailed_Cactus_02
+    m_id: -2147483570
+    m_guid: c86ffaa30b895aa47869682b0da0a1dc
+    m_object: {fileID: 1323242721697377249, guid: c86ffaa30b895aa47869682b0da0a1dc, type: 3}
+  - m_name: PW_P_Detailed_Cactus_03
+    m_id: -2147483569
+    m_guid: 982a4dcb8aeed6d4885fc63fa76b2225
+    m_object: {fileID: 2878501091005820654, guid: 982a4dcb8aeed6d4885fc63fa76b2225, type: 3}
+  - m_name: PW_P_Detailed_CactusCluster_01
+    m_id: -2147483568
+    m_guid: 5d8fb74eb291e1540b802445f6f89577
+    m_object: {fileID: 3191886857387738821, guid: 5d8fb74eb291e1540b802445f6f89577, type: 3}
+  - m_name: PW_P_Detailed_Cladodes_01
+    m_id: -2147483567
+    m_guid: 33303d1844a8c9342bf2528d6c2679f2
+    m_object: {fileID: 2155080116920555393, guid: 33303d1844a8c9342bf2528d6c2679f2, type: 3}
+  - m_name: PW_P_Detailed_Boulder_01
+    m_id: -2147483566
+    m_guid: ec7b700be9f673a4cbeeab488dd7edf2
+    m_object: {fileID: 6149415311662775504, guid: ec7b700be9f673a4cbeeab488dd7edf2, type: 3}
+  - m_name: PW_P_Detailed_Boulder_02
+    m_id: -2147483565
+    m_guid: caf496b7c1174d84f9366fc72d14cc4b
+    m_object: {fileID: 2567874090926058427, guid: caf496b7c1174d84f9366fc72d14cc4b, type: 3}
+  - m_name: PW_P_Detailed_RockBoulder_02
+    m_id: -2147483564
+    m_guid: ad4e6848ad2a096438671e049489fca9
+    m_object: {fileID: 5466073827354548483, guid: ad4e6848ad2a096438671e049489fca9, type: 3}
+  - m_name: PW_P_Detailed_RockPillar_02
+    m_id: -2147483563
+    m_guid: dc556553eab75f74592515793b2840ab
+    m_object: {fileID: 5578826614717856412, guid: dc556553eab75f74592515793b2840ab, type: 3}
+  - m_name: PW_P_Detailed_SmallRock_01
+    m_id: -2147483562
+    m_guid: d2edd91ac2720d64f8cd9e62cba86434
+    m_object: {fileID: 6288935753487478142, guid: d2edd91ac2720d64f8cd9e62cba86434, type: 3}
+  - m_name: PW_P_Detailed_SmallRock_02
+    m_id: -2147483561
+    m_guid: 63bfdb6242b3d024e92ad325f3025b93
+    m_object: {fileID: 4062600583706719522, guid: 63bfdb6242b3d024e92ad325f3025b93, type: 3}
+  - m_name: PW_P_Detailed_RockBoulder_01
+    m_id: -2147483560
+    m_guid: 1dfa16452058fa642a4a8a0a02db069f
+    m_object: {fileID: 769105544188299738, guid: 1dfa16452058fa642a4a8a0a02db069f, type: 3}
+  - m_name: PW_P_Detailed_RockPillar_01
+    m_id: -2147483559
+    m_guid: 2067394c24ea1384ca068c6d30c8870d
+    m_object: {fileID: 996137797733805769, guid: 2067394c24ea1384ca068c6d30c8870d, type: 3}

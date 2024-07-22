@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf996bd940696a4b814912e16c3d5ac, type: 3}
+  m_Name: Deep Desert - Detailed
+  m_EditorClassIdentifier: 
+  m_orderNumber: 0
+  m_spawnerPresetList:
+  - m_autoAssignPrototypes: 1
+    m_spawnerSettings: {fileID: 11400000, guid: 82b827b45db80254f897bf7ffd2adcb8, type: 2}
+    m_isActiveInStamper: 1
+    m_isActiveInBiome: 1
+  - m_autoAssignPrototypes: 1
+    m_spawnerSettings: {fileID: 11400000, guid: 9178a9928cd54a34682d2995ee8a4840, type: 2}
+    m_isActiveInStamper: 0
+    m_isActiveInBiome: 1
+  - m_autoAssignPrototypes: 1
+    m_spawnerSettings: {fileID: 11400000, guid: b94359dcae3940f45a0a66905928f937, type: 2}
+    m_isActiveInStamper: 0
+    m_isActiveInBiome: 1
+  - m_autoAssignPrototypes: 1
+    m_spawnerSettings: {fileID: 11400000, guid: e76f9107c6f9e834db53a70024c2b562, type: 2}
+    m_isActiveInStamper: 0
+    m_isActiveInBiome: 1
+  - m_autoAssignPrototypes: 1
+    m_spawnerSettings: {fileID: 11400000, guid: a7e0dfe6f85938441848dc85bcae2bf6, type: 2}
+    m_isActiveInStamper: 0
+    m_isActiveInBiome: 1
+  - m_autoAssignPrototypes: 1
+    m_spawnerSettings: {fileID: 11400000, guid: ac154b4761fb55044bc8a6d17a431c0c, type: 2}
+    m_isActiveInStamper: 0
+    m_isActiveInBiome: 1
+  - m_autoAssignPrototypes: 1
+    m_spawnerSettings: {fileID: 11400000, guid: 8a022f7ea12f5824aa5a0c88b89aeb88, type: 2}
+    m_isActiveInStamper: 0
+    m_isActiveInBiome: 1
+  - m_autoAssignPrototypes: 1
+    m_spawnerSettings: {fileID: 11400000, guid: 1c7bffe1cdb6c1b409a48072b648e0b7, type: 2}
+    m_isActiveInStamper: 0
+    m_isActiveInBiome: 1
+  - m_autoAssignPrototypes: 1
+    m_spawnerSettings: {fileID: 11400000, guid: e90badd599caba64db14f9e347732bc0, type: 2}
+    m_isActiveInStamper: 0
+    m_isActiveInBiome: 1
+  - m_autoAssignPrototypes: 1
+    m_spawnerSettings: {fileID: 11400000, guid: 2b7408369f47e09428c712415172b242, type: 2}
+    m_isActiveInStamper: 0
+    m_isActiveInBiome: 1
+  m_postProcessingProfileGUID: 72a90444d9338f74a9679be3fe9f5c54
+  m_gaiaSceneCullingProfile: {fileID: 11400000, guid: c832f088050d7034a98eadb4b979dfeb, type: 2}
