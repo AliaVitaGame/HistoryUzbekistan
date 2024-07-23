@@ -2192,7 +2192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speedWalk: 5
-  _speedRun: 7
+  _speedRun: 10
   _speedRotation: 15
   _jumpForce: 0.2
   _gravity: 0.5
