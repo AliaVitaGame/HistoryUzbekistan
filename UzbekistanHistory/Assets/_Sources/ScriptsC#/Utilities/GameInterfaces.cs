@@ -10,6 +10,7 @@ public interface IItem
 public interface IWeapon : IItem
 {
     public float Damage {  get; }
+    public Animator AnimatorOverride {  get; }
 }
 
 public interface IMeleeWeapon : IWeapon

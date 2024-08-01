@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class PlayerMeleeAttacking : MonoBehaviour
 {
-    private IMeleeWeapon weapon;
+    private IMeleeWeapon _weapon;
 
     public void SetWeapon(IMeleeWeapon weapon)
     {
-        this.weapon = weapon;
+        _weapon = weapon;
     }
+
+    public GameObject GetPrefab() => _weapon.ItemPrefab;
 }

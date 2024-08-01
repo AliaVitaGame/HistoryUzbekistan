@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class PlayerDistanceAttacking : MonoBehaviour
 {
-    private IDistanceWeapon weapon;
+    private IDistanceWeapon _weapon;
 
     public void SetWeapon(IDistanceWeapon weapon)
     {
-        this.weapon = weapon;
+        this._weapon = weapon;
     }
+
+    public GameObject GetPrefab() => _weapon.ItemPrefab;
 }
