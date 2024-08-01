@@ -111,7 +111,7 @@ MonoBehaviour:
     defaultState: 1
   tonemapper:
     overrideState: 0
-    value: 0
+    value: 3
   toneCurveToeStrength:
     overrideState: 0
     value: 0
@@ -189,11 +189,11 @@ MonoBehaviour:
     overrideState: 0
     value: 100
   lift:
-    overrideState: 0
-    value: {x: 1, y: 0.75347435, z: 0.92791253, w: 0}
+    overrideState: 1
+    value: {x: 1, y: 0.9598237, z: 0.88505167, w: 0}
   gamma:
     overrideState: 1
-    value: {x: 1, y: 0.9139368, z: 0.82477885, w: 0}
+    value: {x: 1, y: 0.6696883, z: 0.4874339, w: 0}
   gain:
     overrideState: 0
     value: {x: 0.9611071, y: 1, z: 0.9962977, w: 0}
