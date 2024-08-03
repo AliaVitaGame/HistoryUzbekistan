@@ -16,18 +16,18 @@ public class PlayerAnimationController : MonoBehaviour
     }
 
 
-    void FixedUpdate()
+    private void Update()
     {
         Animation();
     }
 
     private void Animation()
     {
-        _playerAnimator.SetBool("Run", GetInputShift());
+        bool isGround = _player.CharacterController.isGrounded;
 
-        _playerAnimator.SetFloat("MoveX", _player.InpuX);
+        _playerAnimator.SetBool("Run", GetInputShift());
         _playerAnimator.SetBool("Move", GetInput());
-        _playerAnimator.SetBool("Jump", _player.CharacterController.isGrounded == false);
+        _playerAnimator.SetBool("Jump", isGround == false);
     }
 
     public void SetAnimator(RuntimeAnimatorController animator)
