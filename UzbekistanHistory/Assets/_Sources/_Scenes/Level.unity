@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.7
   m_CustomReflection: {fileID: 8900000, guid: 56a68e301a0ff55469ae441c0112d256, type: 3}
   m_Sun: {fileID: 1046050402}
-  m_IndirectSpecularColor: {r: 0.4593823, g: 0.35782397, b: 0.32148084, a: 0.7}
+  m_IndirectSpecularColor: {r: 0.45938212, g: 0.35782388, b: 0.32148075, a: 0.7}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -361,37 +361,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -870823317777057635, guid: 76dee2249384a3149ac2ab754b59e0c0, type: 3}
   m_PrefabInstance: {fileID: 1775098972}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &317262258
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 317625746}
-  m_Layer: 0
-  m_Name: PivotWeapon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &317625746
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 317262258}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.0075014704, y: -0.0075021475, z: -0.7070671, w: -0.70706695}
-  m_LocalPosition: {x: 0, y: 0.06, z: 0.019}
-  m_LocalScale: {x: 0.58458, y: 0.58458, z: 0.58458}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 866380711}
-  m_LocalEulerAnglesHint: {x: 0, y: 1.216, z: 90}
 --- !u!4 &364050982 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1189529853000058984, guid: 76dee2249384a3149ac2ab754b59e0c0, type: 3}
@@ -755,11 +724,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: -5480977901411583989, guid: 76dee2249384a3149ac2ab754b59e0c0, type: 3}
   m_PrefabInstance: {fileID: 1775098972}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &866380711 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2032704290529379066, guid: 784abe8b981ea4d4397736b87ce81b18, type: 3}
-  m_PrefabInstance: {fileID: 3701703606354888738}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &899940091
 PrefabInstance:
@@ -1926,10 +1890,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2993744667740943998, guid: 784abe8b981ea4d4397736b87ce81b18, type: 3}
-      propertyPath: pivotSpawnWeapon
-      value: 
-      objectReference: {fileID: 317625746}
     - target: {fileID: 7914303928048174397, guid: 784abe8b981ea4d4397736b87ce81b18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -91.01
@@ -1975,12 +1935,8 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 2878854234213025311, guid: 784abe8b981ea4d4397736b87ce81b18, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2032704290529379066, guid: 784abe8b981ea4d4397736b87ce81b18, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 317625746}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 784abe8b981ea4d4397736b87ce81b18, type: 3}
 --- !u!1 &5093498860062598345

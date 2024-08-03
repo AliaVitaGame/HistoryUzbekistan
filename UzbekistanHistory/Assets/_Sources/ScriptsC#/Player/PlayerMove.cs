@@ -41,7 +41,7 @@ public class PlayerMove : MonoBehaviour
 
     public void Move()
     {
-        Vector3 direction = _character.transform.forward * InpuZ * GetSpeed() + _character.transform.right * InpuX * GetSpeed();
+        Vector3 direction = _pivotDirection.transform.forward * InpuZ * GetSpeed() + _pivotDirection.transform.right * InpuX * GetSpeed();
         CharacterController.Move(new Vector3(direction.x, GetGravity(), direction.z));
 
         if (CharacterController.isGrounded) _gravitySpeed = -_gravity * 10 * Time.deltaTime;
@@ -51,8 +51,9 @@ public class PlayerMove : MonoBehaviour
     {
         if (InpuX != 0 || InpuZ != 0)
         {
+            Vector3 direction = _pivotDirection.right * InpuX + _pivotDirection.forward * InpuZ;
             _character.transform.forward =
-                Vector3.Lerp(_character.transform.forward, _pivotDirection.forward, _speedRotation * Time.deltaTime);
+                Vector3.Lerp(_character.transform.forward, direction, _speedRotation * Time.deltaTime);
             var rotation = _character.transform.rotation;
             rotation.x = 0;
             rotation.z = 0;
@@ -74,7 +75,7 @@ public class PlayerMove : MonoBehaviour
 
     private float GetSpeed()
     {
-        var speed = Input.GetKey(KeyCode.LeftShift) && InpuZ > 0 && InpuX == 0 ? _speedRun * Time.deltaTime : _speedWalk * Time.deltaTime;
+        var speed = Input.GetKey(KeyCode.LeftShift) ? _speedRun * Time.deltaTime : _speedWalk * Time.deltaTime;
         return CharacterController.isGrounded ? speed : speed / 0.7f;
     }
 }

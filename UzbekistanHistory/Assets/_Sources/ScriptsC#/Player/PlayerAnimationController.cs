@@ -14,7 +14,7 @@ public class PlayerAnimationController : MonoBehaviour
     {
         PlayerMove.StartDeadTeleportEvent -= StartDeadAnimation;
     }
-        
+
 
     void FixedUpdate()
     {
@@ -23,25 +23,23 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void Animation()
     {
-        if (InputShift())
-        {
-            _playerAnimator.SetBool("Run", true);
-        }
-        else
-        {
-            _playerAnimator.SetBool("Run", false);
-            _playerAnimator.SetFloat("MoveZ", _player.InpuZ);
-        }
+        _playerAnimator.SetBool("Run", GetInputShift());
 
         _playerAnimator.SetFloat("MoveX", _player.InpuX);
-        _playerAnimator.SetBool("Move", _player.InpuZ != 0 || _player.InpuX != 0);
+        _playerAnimator.SetBool("Move", GetInput());
         _playerAnimator.SetBool("Jump", _player.CharacterController.isGrounded == false);
     }
+
+    public void SetAnimator(RuntimeAnimatorController animator)
+        => _playerAnimator.runtimeAnimatorController = animator;
 
     private void StartDeadAnimation()
         => _playerAnimator.SetTrigger("Dead");
 
-    private bool InputShift()
-        => Input.GetKey(KeyCode.LeftShift) && _player.InpuZ > 0 && _player.InpuX == 0;
+    private bool GetInputShift()
+        => Input.GetKey(KeyCode.LeftShift) && GetInput();
+
+    private bool GetInput()
+       => _player.InpuZ != 0 || _player.InpuX != 0;
 
 }

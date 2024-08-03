@@ -20,9 +20,11 @@ public class PlayerWeaponController : MonoBehaviour
 
         if(playerAnimationController == null)
         {
-            //if(playerAnimationController.transform.TryGetComponent())
-        }
-           
+            if (transform.TryGetComponent(out PlayerAnimationController playerAnimation))
+                playerAnimationController = playerAnimation;
+            else
+                Debug.LogError("Player animator not found");
+        }   
     }
 
     public void SetWeapon(WeaponScriptableObject weapon)
@@ -31,11 +33,13 @@ public class PlayerWeaponController : MonoBehaviour
         {
             _melee.SetWeapon(meleeWeapon);
             SpawnObject(true);
+            SetAnimator(meleeWeapon.AnimatorOverride);
         }
         else if (weapon is IDistanceWeapon distanceWeapon)
         {
             _distance.SetWeapon(distanceWeapon);
             SpawnObject(false);
+            SetAnimator(distanceWeapon.AnimatorOverride);
         }
     }
 
@@ -48,4 +52,7 @@ public class PlayerWeaponController : MonoBehaviour
         if(isMelee) _meleeObject = tempWeapon;
         else _distanceObject = tempWeapon;
     }
+
+    private void SetAnimator(RuntimeAnimatorController controller) 
+        => playerAnimationController.SetAnimator(controller);
 }
