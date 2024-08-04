@@ -3,10 +3,12 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(EnemyMove))]
+[RequireComponent(typeof(EnemyAnimationController))]
 public class EnemyAttaking : MonoBehaviour
 {
     [SerializeField] private float attackRadius = 2;
     [SerializeField] private float aggressionRadius = 15;
+    [SerializeField] private float timeAttack = 1;
     [SerializeField] private LayerMask layerTarget;
 
     public Action StartAttackEvent;
@@ -14,11 +16,13 @@ public class EnemyAttaking : MonoBehaviour
 
     private bool _isAttack;
     private Transform _target;
+    private EnemyAnimationController _animation;
     private EnemyMove _enemyMove;
 
     private void Start()
     {
         _enemyMove = GetComponent<EnemyMove>();
+        _animation = GetComponent<EnemyAnimationController>();
     }
 
     private void FixedUpdate()
@@ -34,17 +38,25 @@ public class EnemyAttaking : MonoBehaviour
     {
         if (_isAttack) return;
 
-        _isAttack = true;
+
         _enemyMove.MoveToPoint(transform.position);
         StartCoroutine(Attack());
+
     }
 
     public IEnumerator Attack()
     {
+        yield return new WaitForSeconds(0.1f);
+
+        _isAttack = true;
         StartAttackEvent?.Invoke();
-        yield return new WaitForSeconds(1);
+        _enemyMove.SetStopMove(true);
+
+        yield return new WaitForSeconds(_animation.GetStateInfo().length);
+
         _isAttack = false;
         EndAttackEvent?.Invoke();
+        _enemyMove.SetStopMove(false);
     }
 
     private void AttackPlayer()
@@ -53,7 +65,7 @@ public class EnemyAttaking : MonoBehaviour
 
         if (Vector3.Distance(transform.position, _target.position) <= attackRadius)
             StartAttack();
-        else
+        else if(_isAttack == false)
             _enemyMove.MoveToPoint(_target.position);
     }
 

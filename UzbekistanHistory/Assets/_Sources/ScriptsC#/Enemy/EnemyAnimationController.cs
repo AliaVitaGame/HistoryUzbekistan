@@ -8,12 +8,14 @@ public class EnemyAnimationController : MonoBehaviour
 
     private void OnEnable()
     {
-        enemyAttaking.StartAttackEvent += AnimationAttack;
+        enemyAttaking.StartAttackEvent += AnimationStartAttack;
+        enemyAttaking.EndAttackEvent += AnimationEndAttack;
     }
 
     private void OnDisable()
     {
-        enemyAttaking.StartAttackEvent -= AnimationAttack;
+        enemyAttaking.StartAttackEvent -= AnimationStartAttack;
+        enemyAttaking.EndAttackEvent -= AnimationEndAttack;
     }
 
     private void Start()
@@ -27,18 +29,15 @@ public class EnemyAnimationController : MonoBehaviour
         Animation();
     }
 
-    private void AnimationAttack()
-    {
-        animator.SetTrigger("Attack");
-    }
+    private void AnimationStartAttack() => animator.SetBool("Attack", true);
+    private void AnimationEndAttack() => animator.SetBool("Attack", false);
 
     private void Animation()
     {
         var agent = enemyMove.Agent;
-        // bool isGround = _player.CharacterController.isGrounded;
-
         animator.SetBool("Move", agent.velocity.magnitude/ agent.speed > 0);
-
-        // _playerAnimator.SetBool("Jump", isGround == false);
     }
+
+   public AnimatorStateInfo GetStateInfo() 
+        => animator.GetCurrentAnimatorStateInfo(0);
 }
