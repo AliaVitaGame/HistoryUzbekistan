@@ -10,4 +10,14 @@ public class WeaponScriptableObject : ScriptableObject, IWeapon
     public GameObject ItemPrefab => itemPrefab;
     public RuntimeAnimatorController AnimatorOverride => animatorOverride;
 
+    public int CountItem { get; set; }
+    public Item GetItem() => null;
+    public void Destroy()
+    {
+
+    }
+    public void SetCountItem(int count)
+    {
+
+    }
 }

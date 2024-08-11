@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1267e01b01dc5b46964119cf64ba858, type: 3}
   m_Name: BaseSword
   m_EditorClassIdentifier: 
-  damage: 0
-  itemPrefab: {fileID: 0}
+  damage: 10
+  itemPrefab: {fileID: 2976060886745256188, guid: 3cb390f8e102a684bae65366237ed83e, type: 3}
   animatorOverride: {fileID: 0}
