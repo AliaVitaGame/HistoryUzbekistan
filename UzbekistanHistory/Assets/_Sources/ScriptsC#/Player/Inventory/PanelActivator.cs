@@ -17,20 +17,18 @@ public class PanelActivator : MonoBehaviour
         DeactivateAllPanel();
     }
 
-    public void InputInventory()
+    private void Update()
     {
-     
-            SetActiveInventory(!inventoryPanel.activeSelf); 
-    }
-    public void InputPause()
-    {
-      
+        if (Input.GetKeyDown(KeyCode.Tab))
+            SetActiveInventory(!inventoryPanel.activeSelf);
+
+        if (Input.GetKeyDown(KeyCode.Escape))
             SetActivePause(!pausePanel.activeSelf);
     }
 
     public void SetActiveInventory(bool active)
     {
-        if(IsCanOpen() == false) return;
+        if (IsCanOpen() == false) return;
 
         DeactivateAllPanel();
         inventoryPanel.SetActive(active);
@@ -57,9 +55,9 @@ public class PanelActivator : MonoBehaviour
         pausePanel.SetActive(false);
         OpenUI(false);
 
-        if(additionalPanels != null)
+        if (additionalPanels != null)
         {
-            if(additionalPanels.Length > 0)
+            if (additionalPanels.Length > 0)
             {
                 for (int i = 0; i < additionalPanels.Length; i++)
                 {
@@ -74,11 +72,11 @@ public class PanelActivator : MonoBehaviour
     {
         if (playerStats)
         {
-            if(playerStats.IsDead)
-            return false;
+            if (playerStats.IsDead)
+                return false;
         }
 
         return true;
-    } 
+    }
 
 }

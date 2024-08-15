@@ -33,15 +33,12 @@ public class PlayerStats : MonoBehaviour, IUnitHealthStats
     public Action PlayerDaadEvent;
 
     private PlayerMove _playerMove;
-    private HealthBar _healthBar;
     private PlayerAnimationController _animationController;
 
     private void Start()
     {
         _playerMove = GetComponent<PlayerMove>();
         _animationController = GetComponent<PlayerAnimationController>();
-        _healthBar = GetComponentInChildren<HealthBar>();
-        _healthBar.Unpin();
 
         RefreshHealthBar();
     }
@@ -116,7 +113,7 @@ public class PlayerStats : MonoBehaviour, IUnitHealthStats
 
     private void RefreshHealthBar()
     {
-        _healthBar.SetHealth(Health, MaxHealth);
+       // _healthBar.SetHealth(Health, MaxHealth);
     }
 
     private int GetRandomValue(int min, int max)

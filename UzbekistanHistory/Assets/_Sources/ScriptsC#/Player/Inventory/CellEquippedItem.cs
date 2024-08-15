@@ -2,6 +2,8 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Image))]
+[RequireComponent(typeof(Button))]
 public class CellEquippedItem : MonoBehaviour, ICell
 {
     [SerializeField] private Item itemCell;
