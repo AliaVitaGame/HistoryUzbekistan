@@ -46,9 +46,8 @@ public class PanelItemInfoInventory : MonoBehaviour
     private void Start()
     {
         useButton.onClick.AddListener(Use);
-       
-        //if(DataPlayer.SDKEnabled)
-        //    DontShowInfo();
+
+        DontShowInfo();
     }
 
     public void Use()
