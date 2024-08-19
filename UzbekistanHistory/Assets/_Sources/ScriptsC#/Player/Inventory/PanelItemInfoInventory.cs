@@ -16,6 +16,7 @@ public class PanelItemInfoInventory : MonoBehaviour
     [Space]
     [SerializeField] private InventoryPlayer inventoryPlayer;
     [SerializeField] private EquippedItemPlayer _equippedItemPlayer;
+    [SerializeField] private PlayerWeaponController weaponController;
     [Space]
     [SerializeField] private PlayerStats playerStats;
 
@@ -46,6 +47,7 @@ public class PanelItemInfoInventory : MonoBehaviour
     private void Start()
     {
         useButton.onClick.AddListener(Use);
+        takeOffButton.onClick.AddListener(TakeOff);
 
         DontShowInfo();
     }
@@ -79,9 +81,9 @@ public class PanelItemInfoInventory : MonoBehaviour
         if (_cellInventory == null) return;
         if (_cellInventory.GetItem() == null) return;
 
-
         if (inventoryPlayer.AddItem(_cellInventory.GetItem(), 1))
         {
+            weaponController.RefreshWeapon();
             _isEquippedItem = false;
             _cellInventory.ReceiveItem();
         }
@@ -94,17 +96,8 @@ public class PanelItemInfoInventory : MonoBehaviour
         var item = cellInventory.GetItem();
         cellItemImage.sprite = item.Sprite;
 
-        var lan = "ru";
-        string name = null;
-        string description = null;
-
-        if (lan == "ru") {
-            name = item.NameItem;
-            description = item.Description;
-        }
-
-        itemNameText.name = name;
-        itemDescriptionText.text = description;
+        itemNameText.name = item.NameItem;
+        itemDescriptionText.text = item.Description;
 
         _isEquippedItem = equipped;
         _cellInventory = cellInventory;

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class InteractsObjectsPlayer : MonoBehaviour
 {
+    [SerializeField] private Transform pivotMoveDirection;
     [SerializeField] private InventoryPlayer inventoryPlayer;
     [SerializeField] private float radiusAttack = 1;
     [SerializeField] private Vector3 distance;
@@ -19,7 +20,7 @@ public class InteractsObjectsPlayer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            var tempInteractsObject = Physics.OverlapSphere(distance + transform.position + transform.forward, radiusAttack);
+            var tempInteractsObject = Physics.OverlapSphere(distance + pivotMoveDirection.position + pivotMoveDirection.forward, radiusAttack);
 
             for (int i = 0; i < tempInteractsObject.Length; i++)
             {
@@ -41,6 +42,7 @@ public class InteractsObjectsPlayer : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(distance + transform.position + transform.forward, radiusAttack);
+        if(pivotMoveDirection)
+        Gizmos.DrawWireSphere(distance + pivotMoveDirection.position + pivotMoveDirection.forward, radiusAttack);
     }
 }

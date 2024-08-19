@@ -18,16 +18,16 @@ public class PlayerWeaponController : MonoBehaviour
         _melee = GetComponent<PlayerMeleeAttacking>();
         _distance = GetComponent<PlayerDistanceAttacking>();
 
-        if(playerAnimationController == null)
+        if (playerAnimationController == null)
         {
             if (transform.TryGetComponent(out PlayerAnimationController playerAnimation))
                 playerAnimationController = playerAnimation;
             else
                 Debug.LogError("Player animator not found");
-        }   
+        }
     }
 
-    public void SetWeapon(WeaponScriptableObject weapon)
+    public void SetWeapon(Item weapon)
     {
         if (weapon is IMeleeWeapon meleeWeapon)
         {
@@ -43,16 +43,24 @@ public class PlayerWeaponController : MonoBehaviour
         }
     }
 
+    public void RefreshWeapon()
+    {
+        if (_melee == null)
+            Destroy(_meleeObject.gameObject);
+        if (_distance == null)
+            Destroy(_distanceObject.gameObject);
+    }
+
     private void SpawnObject(bool isMelee)
     {
         var weaponPrefab = isMelee ? _melee.GetPrefab() : _distance.GetPrefab();
-        var tempWeapon = Instantiate(weaponPrefab, pivotSpawnWeapon.transform.position, Quaternion.identity);
-        tempWeapon.transform.SetParent(pivotSpawnWeapon);
+        var pivotTrs = pivotSpawnWeapon.transform;
+        var tempWeapon = Instantiate(weaponPrefab, pivotTrs.position, pivotTrs.transform.rotation, pivotTrs);
 
-        if(isMelee) _meleeObject = tempWeapon;
+        if (isMelee) _meleeObject = tempWeapon;
         else _distanceObject = tempWeapon;
     }
 
-    private void SetAnimator(RuntimeAnimatorController controller) 
+    private void SetAnimator(RuntimeAnimatorController controller)
         => playerAnimationController.SetAnimator(controller);
 }

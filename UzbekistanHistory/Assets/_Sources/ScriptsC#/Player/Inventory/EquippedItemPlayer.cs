@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class EquippedItemPlayer : MonoBehaviour
 {
+    [SerializeField] private CellEquippedItem _cellSword;
+    [SerializeField] private CellEquippedItem _cellShield;
     [SerializeField] private CellEquippedItem _cellHelmet;
     [SerializeField] private CellEquippedItem _cellArmor;
     [SerializeField] private CellEquippedItem _cellGloves;
@@ -10,6 +12,7 @@ public class EquippedItemPlayer : MonoBehaviour
     [SerializeField] private CellEquippedItem _cellRing;
     [Space]
     [SerializeField] private InventoryPlayer inventoryPlayer;
+    [SerializeField] private PlayerWeaponController weaponController;
     [Space]
     [SerializeField] private AudioFX audioFX;
     [SerializeField] private AudioClip equipAudio;
@@ -19,7 +22,20 @@ public class EquippedItemPlayer : MonoBehaviour
     public void Equip(ICell itemCell)
     {
         var item = itemCell.GetItem();
-        if (item.Type == Item.TypeItem.Helmet)
+
+        if (item.Type == Item.TypeItem.Sword)
+        {
+            HasItemCell(_cellSword);
+            weaponController.SetWeapon(item);
+            _cellSword.AddItem(item);
+        }
+        else if (item.Type == Item.TypeItem.Shield)
+        {
+            HasItemCell(_cellShield);
+            weaponController.SetWeapon(item);
+            _cellShield.AddItem(item);
+        }
+        else if (item.Type == Item.TypeItem.Helmet)
         {
             HasItemCell(_cellHelmet);
             _cellHelmet.AddItem(item);
@@ -28,7 +44,6 @@ public class EquippedItemPlayer : MonoBehaviour
         {
             HasItemCell(_cellArmor);
             _cellArmor.AddItem(item);
-
         }
         else if (item.Type == Item.TypeItem.Gloves)
         {
@@ -64,7 +79,7 @@ public class EquippedItemPlayer : MonoBehaviour
 
     private void HasItemCell(ICell cell)
     {
-        if(cell.HasItem())
+        if (cell.HasItem())
             _lastItem = cell.GetItem();
     }
 
