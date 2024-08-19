@@ -83,7 +83,7 @@ public class PanelItemInfoInventory : MonoBehaviour
 
         if (inventoryPlayer.AddItem(_cellInventory.GetItem(), 1))
         {
-            weaponController.RefreshWeapon();
+            weaponController.RemoveWeapon(_cellInventory.GetItem());
             _isEquippedItem = false;
             _cellInventory.ReceiveItem();
         }
@@ -96,7 +96,7 @@ public class PanelItemInfoInventory : MonoBehaviour
         var item = cellInventory.GetItem();
         cellItemImage.sprite = item.Sprite;
 
-        itemNameText.name = item.NameItem;
+        itemNameText.text = item.NameItem;
         itemDescriptionText.text = item.Description;
 
         _isEquippedItem = equipped;

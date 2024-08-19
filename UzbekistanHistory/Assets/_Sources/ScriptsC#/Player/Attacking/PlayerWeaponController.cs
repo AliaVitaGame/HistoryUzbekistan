@@ -43,13 +43,16 @@ public class PlayerWeaponController : MonoBehaviour
         }
     }
 
-    public void RefreshWeapon()
+    public void RemoveWeapon(Item item)
     {
-        if (_melee == null)
+        if (item is IMeleeWeapon meleeWeapon)
             Destroy(_meleeObject.gameObject);
-        if (_distance == null)
+        else if (item is IDistanceWeapon distanceWeapon)
             Destroy(_distanceObject.gameObject);
+
+        playerAnimationController.ReturnStartingAnimator();
     }
+
 
     private void SpawnObject(bool isMelee)
     {

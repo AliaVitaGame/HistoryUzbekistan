@@ -35,7 +35,10 @@ public class EnemyAnimationController : MonoBehaviour
     private void Animation()
     {
         var agent = enemyMove.Agent;
-        animator.SetBool("Move", agent.velocity.magnitude/ agent.speed > 0);
+
+        bool isMove = agent.velocity.magnitude / agent.speed > 0;
+        animator.SetBool("Move", isMove && enemyMove.IsRunning == false);
+        animator.SetBool("Run", isMove && enemyMove.IsRunning);
     }
 
    public AnimatorStateInfo GetStateInfo() 

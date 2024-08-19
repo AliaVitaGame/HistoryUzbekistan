@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
 {
     [SerializeField] private PlayerMove _player;
     [SerializeField] private Animator _playerAnimator;
+
+    private RuntimeAnimatorController _startAnimatorController;
 
     private void OnEnable()
     {
@@ -15,6 +18,10 @@ public class PlayerAnimationController : MonoBehaviour
         PlayerMove.StartDeadTeleportEvent -= StartDeadAnimation;
     }
 
+    private void Start()
+    {
+        _startAnimatorController = _playerAnimator.runtimeAnimatorController;
+    }
 
     private void Update()
     {
@@ -29,6 +36,9 @@ public class PlayerAnimationController : MonoBehaviour
         _playerAnimator.SetBool("Move", GetInput());
         _playerAnimator.SetBool("Jump", isGround == false);
     }
+
+    public void ReturnStartingAnimator() 
+        => SetAnimator(_startAnimatorController);
 
     public void SetAnimator(RuntimeAnimatorController animator)
         => _playerAnimator.runtimeAnimatorController = animator;

@@ -27,11 +27,12 @@ public class EnemyAttaking : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Physics.CheckSphere(transform.position, aggressionRadius, layerTarget))
+        if(_target == null)
         {
-            FindTarget();
-            AttackPlayer();
+            if (Physics.CheckSphere(transform.position, aggressionRadius, layerTarget))
+                FindTarget();
         }
+        else AttackPlayer();
     }
 
     public void StartAttack()
