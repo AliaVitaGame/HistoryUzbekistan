@@ -12,6 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1267e01b01dc5b46964119cf64ba858, type: 3}
   m_Name: BaseSword
   m_EditorClassIdentifier: 
+  typeItem: 2
+  spriteItem: {fileID: 21300000, guid: 84dc905e8105b6b4d812acc6488aed1a, type: 3}
+  isStack: 0
+  isEquip: 1
+  addProtection: 0
+  addSpeed: 0
+  addHealth: 0
+  addMana: 0
+  price: 0
+  nameItem: "\u041F\u0440\u0435\u0434\u043C\u0435\u0442"
+  description: "\u0411\u0435\u0437 \u043E\u043F\u0438\u0441\u0430\u043D\u0438\u044F"
   damage: 10
   itemPrefab: {fileID: 2976060886745256188, guid: 3cb390f8e102a684bae65366237ed83e, type: 3}
   animatorOverride: {fileID: 0}

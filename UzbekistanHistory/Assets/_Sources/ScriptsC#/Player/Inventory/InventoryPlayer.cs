@@ -22,7 +22,7 @@ public class InventoryPlayer : MonoBehaviour
         int countItem = item.IsStack ? count : 1;
         int remains = 0;
 
-        if(item.Type == Item.TypeItem.Coin)
+        if (item.Type == Item.TypeItem.Coin)
         {
             coinCount += count;
             RefreshUI();
@@ -67,10 +67,12 @@ public class InventoryPlayer : MonoBehaviour
         return false;
     }
 
-    public int GetRemainderLastItem() => _remainderLastItem;
-
     private void RefreshUI()
     {
         coinCountText.text = $"${coinCount}";
     }
+
+    public int GetRemainderLastItem() => _remainderLastItem;
+    public bool AddItem(ItemHandler handler) => AddItem(handler.GetItem(), handler.GetCount());
+
 }

@@ -99,8 +99,8 @@ public class PanelItemInfoInventory : MonoBehaviour
         string description = null;
 
         if (lan == "ru") {
-            name = item.NameItemRU;
-            description = item.DescriptionRU;
+            name = item.NameItem;
+            description = item.Description;
         }
 
         itemNameText.name = name;

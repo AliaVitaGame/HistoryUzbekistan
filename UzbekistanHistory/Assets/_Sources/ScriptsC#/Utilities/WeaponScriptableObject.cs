@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class WeaponScriptableObject : ScriptableObject, IWeapon
+public class WeaponScriptableObject : Item, IWeapon
 {
     [SerializeField] private float damage;
     [SerializeField] private GameObject itemPrefab;

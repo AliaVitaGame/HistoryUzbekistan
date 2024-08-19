@@ -19,12 +19,8 @@ public class Item : ScriptableObject
     [Header("Other")]
     [SerializeField] private int price;
     [Space]
-    [SerializeField] private string nameItemRU = "Предмет";
-    [SerializeField] private string nameItemEN = "Item";
-    [SerializeField] private string nameItemTR = "Öğe";
-    [SerializeField, TextArea(7,7)] private string descriptionRU = "Без описания";
-    [SerializeField, TextArea(7,7)] private string descriptionEN = "No description";
-    [SerializeField, TextArea(7,7)] private string descriptionTR = "açıklama yok";
+    [SerializeField] private string nameItem = "Предмет";
+    [SerializeField, TextArea(7,7)] private string description = "Без описания";
 
     public TypeItem Type => typeItem;
     public Sprite Sprite => spriteItem;
@@ -34,26 +30,24 @@ public class Item : ScriptableObject
     public float AddSpeed => addSpeed;
     public float AddHealth => addHealth;
     public float AddMana => addMana;
-    public string DescriptionRU => descriptionRU;
-    public string DescriptionEN => descriptionEN;
-    public string DescriptionTR => descriptionTR;
+    public string Description => description;
     public int Price => price;
-    public string NameItemRU => nameItemRU;
-    public string NameItemEN => nameItemEN;
-    public string NameItemTR => nameItemTR;
+    public string NameItem => nameItem;
 
     public enum TypeItem
     {
         Coin = 0,
         Recovery = 1,
 
-        Helmet = 2,
-        Armor = 3,
-        Gloves = 4,
-        Greaves = 5,
-        Boots = 6,
-        Ring = 7,
+        Sword = 2,
+        Shield = 3,
+        Helmet = 4,
+        Armor = 5,
+        Gloves = 6,
+        Greaves = 7,
+        Boots = 8,
+        Ring = 9,
 
-        Magic = 8
+        Magic = 10
     }
 }
