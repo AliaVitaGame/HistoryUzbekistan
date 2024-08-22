@@ -7,7 +7,7 @@ public class PlayerMeleeAttacking : MonoBehaviour
     private PlayerAnimationController _animationController;
     private IMeleeWeapon _weapon;
 
-    private float _timeAttack = 1;
+    private float _timeAttack = 1.5f;
     private bool _isAttacking;
     private bool _isSelect;
     private int _countAnimationAttack = 5; // 1 - 5
@@ -37,13 +37,32 @@ public class PlayerMeleeAttacking : MonoBehaviour
         _isAttacking = true;
         _playerMove.SetStopMove(true);
         int randomAttack = Random.Range(1, _countAnimationAttack + 1);
-        //_animationController.SetApplyRootMotion(true);
+
         _animationController.AttackAnimation(randomAttack);
+
+        _timeAttack = GetStateInfo(randomAttack);
+
         yield return new WaitForSeconds(_timeAttack);
-       // _animationController.SetApplyRootMotion(false);
+    
         _animationController.AttackAnimation(randomAttack, false);
         _isAttacking = false;
         _playerMove.SetStopMove(false);
+    }
+
+    private float GetStateInfo(int ID)
+    {
+        RuntimeAnimatorController runtimeAnimatorController = _animationController.GetAnimator().runtimeAnimatorController;
+
+        string animationName = $"Attack{ID}";
+        foreach (AnimationClip clip in runtimeAnimatorController.animationClips)
+        {
+            if (clip.name == animationName)
+            {
+                Debug.Log(clip.name);
+                return clip.length;
+            }
+        }
+        return 1;
     }
 
     public void Select() => _isSelect = true;

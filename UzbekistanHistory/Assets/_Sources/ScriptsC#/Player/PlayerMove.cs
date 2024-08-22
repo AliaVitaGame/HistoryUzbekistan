@@ -32,10 +32,16 @@ public class PlayerMove : MonoBehaviour
     {
         if (_isDead) return;
 
-        InpuX = Input.GetAxis("Horizontal");
-        InpuZ = Input.GetAxis("Vertical");
-
-        if (_isStopMove) return;
+        if (_isStopMove == false)
+        {
+            InpuX = Input.GetAxis("Horizontal");
+            InpuZ = Input.GetAxis("Vertical");
+        }
+        else
+        {
+            InpuX = 0;
+            InpuZ = 0;
+        }
 
         Jump();
         Move();
@@ -52,6 +58,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Rotation()
     {
+        if (_isStopMove) return;
         if (InpuX != 0 || InpuZ != 0)
         {
             Vector3 direction = _pivotDirection.right * InpuX + _pivotDirection.forward * InpuZ;
@@ -67,6 +74,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Jump()
     {
+        if (_isStopMove) return;
         if (Input.GetKey(KeyCode.Space) && CharacterController.isGrounded) _gravitySpeed = _jumpForce;
     }
 

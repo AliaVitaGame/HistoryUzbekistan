@@ -61,4 +61,7 @@ public class PlayerAnimationController : MonoBehaviour
     private bool GetInput()
        => _player.InpuZ != 0 || _player.InpuX != 0;
 
+    public Animator GetAnimator() 
+        => _animator;
+
 }
