@@ -36,18 +36,19 @@ public class Item : ScriptableObject
 
     public enum TypeItem
     {
-        Coin = 0,
-        Recovery = 1,
+        Coin,
+        Recovery,
 
-        Sword = 2,
-        Shield = 3,
-        Helmet = 4,
-        Armor = 5,
-        Gloves = 6,
-        Greaves = 7,
-        Boots = 8,
-        Ring = 9,
+        Sword ,
+        Shield,
+        Bow,
+        Helmet,
+        Armor,
+        Gloves,
+        Greaves,
+        Boots,
+        Ring,
 
-        Magic = 10
+        Magic
     }
 }

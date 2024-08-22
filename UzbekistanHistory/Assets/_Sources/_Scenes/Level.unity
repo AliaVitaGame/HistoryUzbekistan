@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.7
   m_CustomReflection: {fileID: 8900000, guid: 56a68e301a0ff55469ae441c0112d256, type: 3}
   m_Sun: {fileID: 1046050402}
-  m_IndirectSpecularColor: {r: 0.45938212, g: 0.35782388, b: 0.32148075, a: 0.7}
+  m_IndirectSpecularColor: {r: 0.4593823, g: 0.35782397, b: 0.32148084, a: 0.7}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2884,6 +2884,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &574510969 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8401634960782066820, guid: 784abe8b981ea4d4397736b87ce81b18, type: 3}
+  m_PrefabInstance: {fileID: 3701703606354888738}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &586773071
 GameObject:
   m_ObjectHideFlags: 0
@@ -9103,7 +9108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 12.071106, y: -0.000061035156}
+  m_AnchoredPosition: {x: 12.071045, y: 0}
   m_SizeDelta: {x: -249.90991, y: -180.93011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1961360468
@@ -11298,6 +11303,14 @@ PrefabInstance:
       propertyPath: Cells.Array.data[7]
       value: 
       objectReference: {fileID: 874961841}
+    - target: {fileID: 2993744667740943998, guid: 784abe8b981ea4d4397736b87ce81b18, type: 3}
+      propertyPath: animationController
+      value: 
+      objectReference: {fileID: 3701703606354888750}
+    - target: {fileID: 7694080863168718583, guid: 784abe8b981ea4d4397736b87ce81b18, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 574510969}
     - target: {fileID: 7914303928048174397, guid: 784abe8b981ea4d4397736b87ce81b18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -91.01
@@ -11382,6 +11395,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d6268c3f8718f64597d8d2129ed9ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3701703606354888750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7694080863168718583, guid: 784abe8b981ea4d4397736b87ce81b18, type: 3}
+  m_PrefabInstance: {fileID: 3701703606354888738}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7550ed0a5d64c144a870e8d255fb56d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &3742394134784468055

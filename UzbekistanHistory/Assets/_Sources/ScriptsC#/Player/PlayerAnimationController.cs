@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerAnimationController : MonoBehaviour
 {
     [SerializeField] private PlayerMove _player;
-    [SerializeField] private Animator _playerAnimator;
+    [SerializeField] private Animator _animator;
 
     private RuntimeAnimatorController _startAnimatorController;
 
@@ -20,7 +20,7 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void Start()
     {
-        _startAnimatorController = _playerAnimator.runtimeAnimatorController;
+        _startAnimatorController = _animator.runtimeAnimatorController;
     }
 
     private void Update()
@@ -32,19 +32,28 @@ public class PlayerAnimationController : MonoBehaviour
     {
         bool isGround = _player.CharacterController.isGrounded;
 
-        _playerAnimator.SetBool("Run", GetInputShift());
-        _playerAnimator.SetBool("Move", GetInput());
-        _playerAnimator.SetBool("Jump", isGround == false);
+        _animator.SetBool("Run", GetInputShift());
+        _animator.SetBool("Move", GetInput());
+        _animator.SetBool("Jump", isGround == false);
     }
+
+    public void AttackAnimation(int animationID, bool active = true)
+    {
+        _animator.SetBool("Combat State", active);
+        _animator.SetBool($"Attack{animationID}", active);
+    }
+
+    public void SetApplyRootMotion(bool active) 
+        => _animator.applyRootMotion = active;
 
     public void ReturnStartingAnimator() 
         => SetAnimator(_startAnimatorController);
 
     public void SetAnimator(RuntimeAnimatorController animator)
-        => _playerAnimator.runtimeAnimatorController = animator;
+        => _animator.runtimeAnimatorController = animator;
 
     private void StartDeadAnimation()
-        => _playerAnimator.SetTrigger("Dead");
+        => _animator.SetTrigger("Dead");
 
     private bool GetInputShift()
         => Input.GetKey(KeyCode.LeftShift) && GetInput();

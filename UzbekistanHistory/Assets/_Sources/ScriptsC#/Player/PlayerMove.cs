@@ -12,6 +12,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private GameObject _character;
     [SerializeField] private Transform _pivotDirection;
 
+    private bool _isStopMove;
     private float _gravitySpeed;
     private bool _isDead;
 
@@ -33,6 +34,8 @@ public class PlayerMove : MonoBehaviour
 
         InpuX = Input.GetAxis("Horizontal");
         InpuZ = Input.GetAxis("Vertical");
+
+        if (_isStopMove) return;
 
         Jump();
         Move();
@@ -78,4 +81,6 @@ public class PlayerMove : MonoBehaviour
         var speed = Input.GetKey(KeyCode.LeftShift) ? _speedRun * Time.deltaTime : _speedWalk * Time.deltaTime;
         return CharacterController.isGrounded ? speed : speed / 0.7f;
     }
+
+    public void SetStopMove(bool stopMove) => _isStopMove = stopMove;
 }

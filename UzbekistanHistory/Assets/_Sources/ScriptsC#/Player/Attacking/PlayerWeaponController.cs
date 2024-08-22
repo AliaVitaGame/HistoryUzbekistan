@@ -5,11 +5,12 @@ using UnityEngine;
 public class PlayerWeaponController : MonoBehaviour
 {
     [SerializeField] private Transform pivotSpawnWeapon;
-    [SerializeField] private PlayerAnimationController playerAnimationController;
+    [SerializeField] private PlayerAnimationController animationController;
 
     private GameObject _meleeObject;
     private GameObject _distanceObject;
 
+    private int _weaponSelectID;
     private PlayerMeleeAttacking _melee;
     private PlayerDistanceAttacking _distance;
 
@@ -18,12 +19,28 @@ public class PlayerWeaponController : MonoBehaviour
         _melee = GetComponent<PlayerMeleeAttacking>();
         _distance = GetComponent<PlayerDistanceAttacking>();
 
-        if (playerAnimationController == null)
+        if (animationController == null)
         {
             if (transform.TryGetComponent(out PlayerAnimationController playerAnimation))
-                playerAnimationController = playerAnimation;
+                animationController = playerAnimation;
             else
                 Debug.LogError("Player animator not found");
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            if (_melee == null) return;
+            _melee.Select();
+            _distance.Deselect();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            if (_distance == null) return;
+            _distance.Select();
+            _melee.Deselect();
         }
     }
 
@@ -33,6 +50,10 @@ public class PlayerWeaponController : MonoBehaviour
         {
             _melee.SetWeapon(meleeWeapon);
             SpawnObject(true);
+
+            if (_melee) _melee.Select();
+            if (_distance) _distance.Select();
+
             SetAnimator(meleeWeapon.AnimatorOverride);
         }
         else if (weapon is IDistanceWeapon distanceWeapon)
@@ -50,7 +71,7 @@ public class PlayerWeaponController : MonoBehaviour
         else if (item is IDistanceWeapon distanceWeapon)
             Destroy(_distanceObject.gameObject);
 
-        playerAnimationController.ReturnStartingAnimator();
+        animationController.ReturnStartingAnimator();
     }
 
 
@@ -65,5 +86,5 @@ public class PlayerWeaponController : MonoBehaviour
     }
 
     private void SetAnimator(RuntimeAnimatorController controller)
-        => playerAnimationController.SetAnimator(controller);
+        => animationController.SetAnimator(controller);
 }
