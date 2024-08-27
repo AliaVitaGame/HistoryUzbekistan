@@ -4,7 +4,7 @@ public class InteractsObjectsPlayer : MonoBehaviour
 {
     [SerializeField] private Transform pivotMoveDirection;
     [SerializeField] private InventoryPlayer inventoryPlayer;
-    [SerializeField] private float radiusAttack = 1;
+    [SerializeField] private float radiusInteract = 1;
     [SerializeField] private Vector3 distance;
 
     private void Start()
@@ -20,7 +20,7 @@ public class InteractsObjectsPlayer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            var tempInteractsObject = Physics.OverlapSphere(distance + pivotMoveDirection.position + pivotMoveDirection.forward, radiusAttack);
+            var tempInteractsObject = Physics.OverlapSphere(distance + pivotMoveDirection.position + pivotMoveDirection.forward, radiusInteract);
 
             for (int i = 0; i < tempInteractsObject.Length; i++)
             {
@@ -43,6 +43,6 @@ public class InteractsObjectsPlayer : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         if(pivotMoveDirection)
-        Gizmos.DrawWireSphere(distance + pivotMoveDirection.position + pivotMoveDirection.forward, radiusAttack);
+        Gizmos.DrawWireSphere(distance + pivotMoveDirection.position + pivotMoveDirection.forward, radiusInteract);
     }
 }

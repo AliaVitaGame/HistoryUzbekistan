@@ -48,8 +48,8 @@ public class PlayerWeaponController : MonoBehaviour
     {
         if (weapon is IMeleeWeapon meleeWeapon)
         {
-            _melee.SetWeapon(meleeWeapon);
             SpawnObject(true);
+            _melee.SetWeapon(meleeWeapon, _meleeObject);
 
             if (_melee) _melee.Select();
             if (_distance) _distance.Select();
@@ -58,8 +58,8 @@ public class PlayerWeaponController : MonoBehaviour
         }
         else if (weapon is IDistanceWeapon distanceWeapon)
         {
-            _distance.SetWeapon(distanceWeapon);
             SpawnObject(false);
+            _distance.SetWeapon(distanceWeapon);
             SetAnimator(distanceWeapon.AnimatorOverride);
         }
     }

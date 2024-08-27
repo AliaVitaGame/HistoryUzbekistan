@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class PanelActivator : MonoBehaviour
 {
+    [SerializeField] private GameObject[] mainElementsUI;
+    [Space]
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private Button activeInventoryButton;
     [Space]
@@ -30,23 +32,35 @@ public class PanelActivator : MonoBehaviour
     {
         if (IsCanOpen() == false) return;
 
-        DeactivateAllPanel();
         inventoryPanel.SetActive(active);
-        OpenUI(active);
     }
 
     public void SetActivePause(bool active)
     {
         if (IsCanOpen() == false) return;
 
-        DeactivateAllPanel();
         pausePanel.SetActive(active);
+
+        if (active) TimeScaleController.Stop();
+        else TimeScaleController.Play();
+
         OpenUI(active);
+    }
+
+    private void SetActivEmainElements(bool active)
+    {
+        for (int i = 0; i < mainElementsUI.Length; i++)
+        {
+            if (mainElementsUI[i])
+                mainElementsUI[i].SetActive(active);
+        }
     }
 
     private void OpenUI(bool active)
     {
+        DeactivateAllPanel();
         ManagerUI.Instance.OpenUI(active);
+        SetActivEmainElements(!active);
     }
 
     public void DeactivateAllPanel()
