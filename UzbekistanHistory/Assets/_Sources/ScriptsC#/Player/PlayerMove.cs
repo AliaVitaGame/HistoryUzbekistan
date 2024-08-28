@@ -26,6 +26,12 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         CharacterController = GetComponent<CharacterController>();
+        _pivotDirection.SetParent(null);
+    }
+
+    private void Update()
+    {
+        _pivotDirection.position = transform.position;
     }
 
     private void FixedUpdate()
@@ -45,7 +51,7 @@ public class PlayerMove : MonoBehaviour
 
         Jump();
         Move();
-        Rotation();
+        RotationModel();
     }
 
     public void Move()
@@ -56,20 +62,14 @@ public class PlayerMove : MonoBehaviour
         if (CharacterController.isGrounded) _gravitySpeed = -_gravity * 10 * Time.deltaTime;
     }
 
-    private void Rotation()
+    private void RotationModel()
     {
         if (_isStopMove) return;
         if (InpuX != 0 || InpuZ != 0)
         {
             Vector3 direction = _pivotDirection.right * InpuX + _pivotDirection.forward * InpuZ;
-            _character.transform.forward =
-                Vector3.Lerp(_character.transform.forward, direction, _speedRotation * Time.deltaTime);
-            var rotation = _character.transform.rotation;
-            rotation.x = 0;
-            rotation.z = 0;
-            _character.transform.rotation = rotation;
+            SetModelRotation(direction, _speedRotation);
         }
-
     }
 
     private void Jump()
@@ -78,11 +78,33 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && CharacterController.isGrounded) _gravitySpeed = _jumpForce;
     }
 
+    public void SetRotation(Vector3 direction, float speed = Mathf.Infinity)
+    {
+        _pivotDirection.forward = Vector3.Lerp(_pivotDirection.forward, direction, speed * Time.deltaTime);
+        transform.forward = Vector3.Lerp(transform.forward, direction, speed * Time.deltaTime);
+        var rotation = transform.rotation;
+        rotation.x = 0;
+        rotation.z = 0;
+        transform.rotation = rotation;
+        _pivotDirection.forward = transform.forward;
+    }
+
+    public void SetModelRotation(Vector3 direction, float speed = Mathf.Infinity)
+    {
+        _character.transform.forward = Vector3.Lerp(_character.transform.forward, direction, speed * Time.deltaTime);
+        var rotation = _character.transform.rotation;
+        rotation.x = 0;
+        rotation.z = 0;
+        _character.transform.rotation = rotation;
+    }
+
     public float GetGravity()
     {
         if (CharacterController.isGrounded == false) _gravitySpeed -= _gravity * Time.deltaTime;
         return _gravitySpeed;
     }
+
+    public Transform GetPivotDirection() => _pivotDirection;
 
     private float GetSpeed()
     {

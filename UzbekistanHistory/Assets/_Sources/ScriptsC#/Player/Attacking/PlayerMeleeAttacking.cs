@@ -38,10 +38,17 @@ public class PlayerMeleeAttacking : MonoBehaviour
         _isAttacking = true;
         _weaponCollider.enabled = true;
         _playerMove.SetStopMove(true);
+
+        var direction = _playerMove.GetPivotDirection().forward;
+        _playerMove.SetRotation(direction);
+        _playerMove.SetModelRotation(direction);
+
         int randomAttack = Random.Range(1, _countAnimationAttack + 1);
 
         _animationController.AttackAnimation(randomAttack);
         _timeAttack = GetTimeAnimation();
+
+        _animationController.SetApplyRootMotion(true);
 
         yield return new WaitForSeconds(_timeAttack);
 
@@ -49,6 +56,8 @@ public class PlayerMeleeAttacking : MonoBehaviour
         _animationController.AttackAnimation(randomAttack, false);
         _isAttacking = false;
         _playerMove.SetStopMove(false);
+
+        _animationController.SetApplyRootMotion(false);
     }
 
     private float GetTimeAnimation()
@@ -61,12 +70,13 @@ public class PlayerMeleeAttacking : MonoBehaviour
     public void Select() => _isSelect = true;
     public void Deselect() => _isSelect = false;
 
-    public void SetWeapon(IMeleeWeapon weapon, GameObject weaponObject)
+    public void SetWeapon(IMeleeWeapon weapon) 
+        => _weapon = weapon;
+    public GameObject GetPrefab() 
+        => _weapon.ItemPrefab;
+    public void SetWeaponObject(GameObject weaponCollider)
     {
-        _weapon = weapon;
-        _weaponCollider = weaponObject.GetComponent<Collider>();
+        _weaponCollider = weaponCollider.GetComponent<Collider>();
         _weaponCollider.enabled = false;
     }
-
-    public GameObject GetPrefab() => _weapon.ItemPrefab;
 }

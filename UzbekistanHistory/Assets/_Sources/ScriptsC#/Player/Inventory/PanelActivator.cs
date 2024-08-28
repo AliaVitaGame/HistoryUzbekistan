@@ -33,6 +33,7 @@ public class PanelActivator : MonoBehaviour
         if (IsCanOpen() == false) return;
 
         inventoryPanel.SetActive(active);
+        OpenUI(active);
     }
 
     public void SetActivePause(bool active)
@@ -58,7 +59,6 @@ public class PanelActivator : MonoBehaviour
 
     private void OpenUI(bool active)
     {
-        DeactivateAllPanel();
         ManagerUI.Instance.OpenUI(active);
         SetActivEmainElements(!active);
     }
@@ -67,6 +67,7 @@ public class PanelActivator : MonoBehaviour
     {
         inventoryPanel.SetActive(false);
         pausePanel.SetActive(false);
+
         OpenUI(false);
 
         if (additionalPanels != null)

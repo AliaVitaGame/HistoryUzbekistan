@@ -48,8 +48,9 @@ public class PlayerWeaponController : MonoBehaviour
     {
         if (weapon is IMeleeWeapon meleeWeapon)
         {
+            _melee.SetWeapon(meleeWeapon);
             SpawnObject(true);
-            _melee.SetWeapon(meleeWeapon, _meleeObject);
+            _melee.SetWeaponObject(_meleeObject);
 
             if (_melee) _melee.Select();
             if (_distance) _distance.Select();
