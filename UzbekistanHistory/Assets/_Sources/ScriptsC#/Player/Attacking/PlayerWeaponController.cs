@@ -4,6 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerDistanceAttacking))]
 public class PlayerWeaponController : MonoBehaviour
 {
+    [SerializeField] private LayerMask layerTarget;
     [SerializeField] private Transform pivotSpawnWeapon;
     [SerializeField] private PlayerAnimationController animationController;
 
@@ -51,6 +52,7 @@ public class PlayerWeaponController : MonoBehaviour
             _melee.SetWeapon(meleeWeapon);
             SpawnObject(true);
             _melee.SetWeaponObject(_meleeObject);
+            _melee.SetStats(weapon.Damage, layerTarget);
 
             if (_melee) _melee.Select();
             if (_distance) _distance.Select();

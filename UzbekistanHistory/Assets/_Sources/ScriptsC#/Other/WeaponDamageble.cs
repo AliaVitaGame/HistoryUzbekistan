@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class WeaponDamageble : MonoBehaviour
 {
-    [SerializeField] private float radiusCollision;
+    [SerializeField] private float radiusCollision = 0.8f;
     [SerializeField] private Vector3 centerCollision;
 
     private float _damage;
@@ -16,9 +16,9 @@ public class WeaponDamageble : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_activeCollision) return;
+        if (_activeCollision == false) return;
 
-        var tempObject = Physics.OverlapSphere(centerCollision, radiusCollision, _targetLayer);
+        var tempObject = Physics.OverlapSphere(centerCollision + transform.position + transform.forward, radiusCollision, _targetLayer);
 
         if (tempObject == null) return;
         if (tempObject.Length <= 0) return;
@@ -27,6 +27,7 @@ public class WeaponDamageble : MonoBehaviour
         {
             if (tempObject[i])
             {
+
                 if (tempObject[i].TryGetComponent(out IUnitHealthStats unitHealth))
                     unitHealth.TakeDamage(_damage);
             }
@@ -36,12 +37,18 @@ public class WeaponDamageble : MonoBehaviour
     public void SetActiveCollision(bool value)
         => _activeCollision = value;
 
+    public void SetStats(float damagem, LayerMask layerTarget)
+    {
+        _damage = damagem;
+        SetLayerTarget(layerTarget);
+    }
+
     public void SetLayerTarget(LayerMask mask)
         => _targetLayer = mask;
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(centerCollision, radiusCollision);
+        Gizmos.DrawWireSphere(centerCollision + transform.position + transform.forward, radiusCollision);
     }
 }

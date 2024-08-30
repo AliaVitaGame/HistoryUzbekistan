@@ -6,7 +6,7 @@ public class PlayerMeleeAttacking : MonoBehaviour
     private PlayerMove _playerMove;
     private PlayerAnimationController _animationController;
     private IMeleeWeapon _weapon;
-    private Collider _weaponCollider;
+    private WeaponDamageble _weaponDamageble;
 
     private float _timeAttack = 1.5f;
     private bool _isAttacking;
@@ -36,7 +36,7 @@ public class PlayerMeleeAttacking : MonoBehaviour
     public IEnumerator Attack()
     {
         _isAttacking = true;
-        _weaponCollider.enabled = true;
+        _weaponDamageble.SetActiveCollision(true);
         _playerMove.SetStopMove(true);
 
         var direction = _playerMove.GetPivotDirection().forward;
@@ -52,7 +52,7 @@ public class PlayerMeleeAttacking : MonoBehaviour
 
         yield return new WaitForSeconds(_timeAttack);
 
-        _weaponCollider.enabled = false;
+        _weaponDamageble.SetActiveCollision(false);
         _animationController.AttackAnimation(randomAttack, false);
         _isAttacking = false;
         _playerMove.SetStopMove(false);
@@ -76,7 +76,10 @@ public class PlayerMeleeAttacking : MonoBehaviour
         => _weapon.ItemPrefab;
     public void SetWeaponObject(GameObject weaponCollider)
     {
-        _weaponCollider = weaponCollider.GetComponent<Collider>();
-        _weaponCollider.enabled = false;
+        _weaponDamageble = weaponCollider.GetComponent<WeaponDamageble>();
+        _weaponDamageble.SetActiveCollision(false);
     }
+
+    public void SetStats(float damage, LayerMask layerTarget) 
+        => _weaponDamageble.SetStats(damage, layerTarget);
 }

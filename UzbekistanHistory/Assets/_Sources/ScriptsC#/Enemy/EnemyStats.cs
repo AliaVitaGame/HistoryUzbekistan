@@ -43,7 +43,7 @@ public class EnemyStats : MonoBehaviour, IUnitHealthStats
         RefreshHealthBar();
     }
 
-    public void TakeDamage(float damage, float timeStun, float repulsion)
+    public void TakeDamage(float damage, float timeStun = 0, float repulsion = 0)
     {
         if (IsDead) return;
 

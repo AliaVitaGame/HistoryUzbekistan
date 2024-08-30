@@ -9,6 +9,9 @@ public class Item : ScriptableObject
     [SerializeField] private bool isStack;
     [SerializeField] private bool isEquip;
     [Space]
+    [Header("Weapon")]
+    [SerializeField] private float damage;
+    [Space]
     [Header("Protection")]
     [SerializeField] private float addProtection;
     [SerializeField] private float addSpeed;
@@ -26,6 +29,9 @@ public class Item : ScriptableObject
     public Sprite Sprite => spriteItem;
     public bool IsStack => isStack;
     public bool IsEquip => isEquip;
+
+    public float Damage => damage;
+
     public float AddProtection => addProtection;
     public float AddSpeed => addSpeed;
     public float AddHealth => addHealth;
