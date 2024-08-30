@@ -32,6 +32,11 @@ public class EnemyAnimationController : MonoBehaviour
     private void AnimationStartAttack() => animator.SetBool("Attack", true);
     private void AnimationEndAttack() => animator.SetBool("Attack", false);
 
+    public void HitAnimation()
+    {
+        animator.SetTrigger("Hit");
+    }
+
     private void Animation()
     {
         var agent = enemyMove.Agent;

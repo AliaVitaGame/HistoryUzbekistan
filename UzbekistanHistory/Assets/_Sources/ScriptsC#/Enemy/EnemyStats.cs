@@ -2,9 +2,9 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerMove))]
-[RequireComponent(typeof(PlayerAnimationController))]
-public class PlayerStats : MonoBehaviour, IUnitHealthStats
+[RequireComponent(typeof(EnemyMove))]
+[RequireComponent(typeof(EnemyAnimationController))]
+public class EnemyStats : MonoBehaviour, IUnitHealthStats
 {
     [SerializeField] private float health;
     [SerializeField] private float maxHealth;
@@ -32,13 +32,13 @@ public class PlayerStats : MonoBehaviour, IUnitHealthStats
     public Action PlayerHitEvent;
     public Action PlayerDaadEvent;
 
-    private PlayerMove _playerMove;
-    private PlayerAnimationController _animationController;
+    private EnemyMove _enemyMove;
+    private EnemyAnimationController _animationController;
 
     private void Start()
     {
-        _playerMove = GetComponent<PlayerMove>();
-        _animationController = GetComponent<PlayerAnimationController>();
+        _enemyMove = GetComponent<EnemyMove>();
+        _animationController = GetComponent<EnemyAnimationController>();
 
         RefreshHealthBar();
     }

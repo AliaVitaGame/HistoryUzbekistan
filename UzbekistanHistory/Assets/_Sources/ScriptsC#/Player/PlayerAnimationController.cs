@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
@@ -41,6 +42,11 @@ public class PlayerAnimationController : MonoBehaviour
     {
         _animator.SetBool("Combat State", active);
         _animator.SetBool($"Attack{animationID}", active);
+    }
+
+    public void HitAnimation()
+    {
+        _animator.SetTrigger("Hit");
     }
 
     public void SetApplyRootMotion(bool active) 
