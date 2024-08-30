@@ -7,6 +7,7 @@ public class PlayerAnimationController : MonoBehaviour
     [SerializeField] private PlayerMove _player;
     [SerializeField] private Animator _animator;
 
+    private bool _isAttack;
     private RuntimeAnimatorController _startAnimatorController;
 
     private void OnEnable()
@@ -31,6 +32,8 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void Animation()
     {
+        if (_isAttack) return;
+
         bool isGround = _player.CharacterController.isGrounded;
 
         _animator.SetBool("Run", GetInputShift());
@@ -42,6 +45,7 @@ public class PlayerAnimationController : MonoBehaviour
     {
         _animator.SetBool("Combat State", active);
         _animator.SetBool($"Attack{animationID}", active);
+        _isAttack = active;
     }
 
     public void HitAnimation()
