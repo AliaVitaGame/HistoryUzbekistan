@@ -8,7 +8,6 @@ public class EnemyStats : MonoBehaviour, IUnitHealthStats
 {
     [SerializeField] private float health;
     [SerializeField] private float maxHealth;
-    [SerializeField] private EquippedItemPlayer equippedItemPlayer;
     [SerializeField] private ParticleSystem bloodFX;
     [Space]
     [SerializeField] private AudioClip[] damageAudio;
@@ -43,15 +42,14 @@ public class EnemyStats : MonoBehaviour, IUnitHealthStats
         RefreshHealthBar();
     }
 
-    public void TakeDamage(float damage, float timeStun = 0, float repulsion = 0)
+    public void TakeDamage(float damage, float timeStun = 1, float repulsion = 0)
     {
         if (IsDead) return;
-
-        _animationController.HitAnimation();
+    
         audioFX.PlayAudioRandomPitch(damageAudio[GetRandomValue(0, damageAudio.Length)]);
         audioFX.PlayAudioRandomPitch(bloodAudio[GetRandomValue(0, bloodAudio.Length)]);
 
-        var damageTakenArmor = damage * (1 - (equippedItemPlayer.GetDamageRepaymentPercentage() / 100));
+        var damageTakenArmor = damage;
         Health -= damageTakenArmor;
 
         PlayerHitEvent?.Invoke();
@@ -72,8 +70,10 @@ public class EnemyStats : MonoBehaviour, IUnitHealthStats
     public IEnumerator StunTimer(float time)
     {
         IsStunned = true;
+        _animationController.HitAnimation(true);
         yield return new WaitForSeconds(time);
         IsStunned = false;
+        _animationController.HitAnimation(false);
     }
 
     private void Dead()

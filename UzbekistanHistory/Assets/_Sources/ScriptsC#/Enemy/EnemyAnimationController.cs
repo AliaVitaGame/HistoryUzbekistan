@@ -32,9 +32,10 @@ public class EnemyAnimationController : MonoBehaviour
     private void AnimationStartAttack() => animator.SetBool("Attack", true);
     private void AnimationEndAttack() => animator.SetBool("Attack", false);
 
-    public void HitAnimation()
+    public void HitAnimation(bool active)
     {
-        animator.SetTrigger("Hit");
+        if (active) animator.SetTrigger("HitTrigger");
+        animator.SetBool("Hit", active);
     }
 
     private void Animation()
@@ -46,6 +47,6 @@ public class EnemyAnimationController : MonoBehaviour
         animator.SetBool("Run", isMove && enemyMove.IsRunning);
     }
 
-   public AnimatorStateInfo GetStateInfo() 
-        => animator.GetCurrentAnimatorStateInfo(0);
+    public AnimatorStateInfo GetStateInfo()
+         => animator.GetCurrentAnimatorStateInfo(0);
 }

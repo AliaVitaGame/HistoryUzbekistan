@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62a64c2d75fd7534cbfa0a716e0ec517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radiusCollision: 0.8
-  centerCollision: {x: 0, y: 0, z: 0}
+  radiusCollision: 0.1
+  centerUpCollision: 0.7
 --- !u!65 &5915153866463491961
 BoxCollider:
   m_ObjectHideFlags: 0
