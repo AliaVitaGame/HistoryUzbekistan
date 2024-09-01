@@ -20,12 +20,15 @@ public class EnemyMove : MonoBehaviour
     public void SetStopMove(bool stopMove)
     {
         _stopMove = stopMove;
-       // SetSpeed(_stopMove ? 0 : _startSpeedMove);
+        // SetSpeed(_stopMove ? 0 : _startSpeedMove);
     }
     public void SetSpeed(float speed) => Agent.speed = speed;
 
     public void MoveToPoint(Vector3 point)
     {
+        if (_stopMove) return;
+        else MoveToPoint(transform.position);
+
         IsRunning = Vector3.Distance(transform.position, point) > distanceForWalk;
         SetSpeed(IsRunning ? speedRun : speedWalk);
         Agent.SetDestination(point);

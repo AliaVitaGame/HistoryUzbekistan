@@ -7,6 +7,7 @@ public class WeaponDamageble : MonoBehaviour
     [SerializeField] private float centerUpCollision = 0.7f;
 
     private float _damage;
+    private float _stunTime;
     private bool _activeCollision;
     private LayerMask _targetLayer;
 
@@ -38,7 +39,7 @@ public class WeaponDamageble : MonoBehaviour
 
                 if (tempObject[i].TryGetComponent(out IUnitHealthStats unitHealth))
                 {
-                    unitHealth.TakeDamage(_damage);
+                    unitHealth.TakeDamage(_damage, _stunTime);
                     _damageHasBeenDone.Add(tempObject[i]);
                 }
             }
@@ -51,9 +52,10 @@ public class WeaponDamageble : MonoBehaviour
         if(value == false) _damageHasBeenDone.Clear();
     }
 
-    public void SetStats(float damagem, LayerMask layerTarget)
+    public void SetStats(float damagem, float stunTime, LayerMask layerTarget)
     {
         _damage = damagem;
+        _stunTime = stunTime;
         SetLayerTarget(layerTarget);
     }
 

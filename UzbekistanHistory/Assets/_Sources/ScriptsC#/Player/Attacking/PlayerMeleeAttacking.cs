@@ -80,6 +80,6 @@ public class PlayerMeleeAttacking : MonoBehaviour
         _weaponDamageble.SetActiveCollision(false);
     }
 
-    public void SetStats(float damage, LayerMask layerTarget) 
-        => _weaponDamageble.SetStats(damage, layerTarget);
+    public void SetStats(float damage,float stunTime, LayerMask layerTarget) 
+        => _weaponDamageble.SetStats(damage, stunTime, layerTarget);
 }

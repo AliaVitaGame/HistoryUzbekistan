@@ -11,6 +11,7 @@ public class Item : ScriptableObject
     [Space]
     [Header("Weapon")]
     [SerializeField] private float damage;
+    [SerializeField] private float stunTime;
     [Space]
     [Header("Protection")]
     [SerializeField] private float addProtection;
@@ -31,6 +32,7 @@ public class Item : ScriptableObject
     public bool IsEquip => isEquip;
 
     public float Damage => damage;
+    public float StunTime => stunTime;
 
     public float AddProtection => addProtection;
     public float AddSpeed => addSpeed;

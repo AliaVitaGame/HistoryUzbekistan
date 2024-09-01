@@ -28,8 +28,9 @@ public class EnemyStats : MonoBehaviour, IUnitHealthStats
     public bool IsDead { get; set; }
     public bool IsStunned { get; set; }
 
-    public Action PlayerHitEvent;
-    public Action PlayerDaadEvent;
+    public Action HitEvent;
+    public Action DaadEvent;
+    public Action<bool> StunEvent;
 
     private EnemyMove _enemyMove;
     private EnemyAnimationController _animationController;
@@ -52,7 +53,7 @@ public class EnemyStats : MonoBehaviour, IUnitHealthStats
         var damageTakenArmor = damage;
         Health -= damageTakenArmor;
 
-        PlayerHitEvent?.Invoke();
+        HitEvent?.Invoke();
 
         bloodFX.Play();
 
@@ -70,17 +71,19 @@ public class EnemyStats : MonoBehaviour, IUnitHealthStats
     public IEnumerator StunTimer(float time)
     {
         IsStunned = true;
-        _animationController.HitAnimation(true);
+        StunEvent?.Invoke(true);
+        Debug.Log(1);
         yield return new WaitForSeconds(time);
-        IsStunned = false;
+        StunEvent?.Invoke(false);
         _animationController.HitAnimation(false);
+        Debug.Log(2);
     }
 
     private void Dead()
     {
         IsDead = true;
         DeadAudio();
-        PlayerDaadEvent?.Invoke();
+        DaadEvent?.Invoke();
     }
 
     public void AddHealth(float value)

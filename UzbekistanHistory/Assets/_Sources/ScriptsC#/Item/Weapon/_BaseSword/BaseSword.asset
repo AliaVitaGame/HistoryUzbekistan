@@ -16,6 +16,8 @@ MonoBehaviour:
   spriteItem: {fileID: 21300000, guid: 84dc905e8105b6b4d812acc6488aed1a, type: 3}
   isStack: 0
   isEquip: 1
+  damage: 10
+  stunTime: 3
   addProtection: 0
   addSpeed: 0
   addHealth: 0
