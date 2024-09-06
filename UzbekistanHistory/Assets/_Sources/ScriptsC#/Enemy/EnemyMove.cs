@@ -27,7 +27,6 @@ public class EnemyMove : MonoBehaviour
     public void MoveToPoint(Vector3 point)
     {
         if (_stopMove) return;
-        else MoveToPoint(transform.position);
 
         IsRunning = Vector3.Distance(transform.position, point) > distanceForWalk;
         SetSpeed(IsRunning ? speedRun : speedWalk);

@@ -15,6 +15,8 @@ public class PlayerWeaponController : MonoBehaviour
     private PlayerMeleeAttacking _melee;
     private PlayerDistanceAttacking _distance;
 
+    private bool _isStop;
+
     private void Start()
     {
         _melee = GetComponent<PlayerMeleeAttacking>();
@@ -31,6 +33,8 @@ public class PlayerWeaponController : MonoBehaviour
 
     private void Update()
     {
+        if (_isStop) return;
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             if (_melee == null) return;
@@ -90,4 +94,7 @@ public class PlayerWeaponController : MonoBehaviour
 
     private void SetAnimator(RuntimeAnimatorController controller)
         => animationController.SetAnimator(controller);
+
+    public void SetStop(bool stop) 
+        => _isStop = stop;
 }

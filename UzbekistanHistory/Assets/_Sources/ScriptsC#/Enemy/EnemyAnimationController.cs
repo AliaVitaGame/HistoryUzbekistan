@@ -7,6 +7,9 @@ public class EnemyAnimationController : MonoBehaviour
     [SerializeField] private EnemyMove enemyMove;
     [SerializeField] private EnemyStats enemyStats;
 
+    private int _lastAttackID;
+    private int _countAnimationAttack = 5; // 1 - 5
+
     private void OnEnable()
     {
         enemyAttaking.StartAttackEvent += AnimationStartAttack;
@@ -34,8 +37,23 @@ public class EnemyAnimationController : MonoBehaviour
         Animation();
     }
 
-    private void AnimationStartAttack() => animator.SetBool("Attack", true);
-    private void AnimationEndAttack() => animator.SetBool("Attack", false);
+    private void AnimationStartAttack()
+    {
+        GetRandomAttackID();
+        animator.SetBool("Combat State", true);
+        animator.SetBool($"Attack{_lastAttackID}", true);
+    }
+    private void AnimationEndAttack()
+    {
+        animator.SetBool("Combat State", false);
+        animator.SetBool($"Attack{_lastAttackID}", false);
+    }
+
+    private int GetRandomAttackID() 
+    {
+        _lastAttackID = Random.Range(1, _countAnimationAttack + 1); 
+        return _lastAttackID;
+    }
     private void DeadAnimation() => animator.SetTrigger("Dead");
 
     public void HitAnimation(bool active)

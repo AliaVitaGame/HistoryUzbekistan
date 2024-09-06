@@ -20,9 +20,6 @@ public class PlayerMove : MonoBehaviour
     public float InpuZ { get; private set; }
     public CharacterController CharacterController { get; private set; }
 
-    public static event Action StartDeadTeleportEvent;
-    public static event Action EndetDeadTeleportEvent;
-
     private void Start()
     {
         CharacterController = GetComponent<CharacterController>();
@@ -113,4 +110,5 @@ public class PlayerMove : MonoBehaviour
     }
 
     public void SetStopMove(bool stopMove) => _isStopMove = stopMove;
+    public void SetIsDead(bool active) => _isDead = active;
 }

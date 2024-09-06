@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAnimationController : MonoBehaviour
 {
     [SerializeField] private PlayerMove _player;
+    [SerializeField] private PlayerStats _slayerStats;
     [SerializeField] private Animator _animator;
 
     private bool _isAttack;
@@ -12,12 +13,12 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerMove.StartDeadTeleportEvent += StartDeadAnimation;
+        _slayerStats.PlayerDaadEvent += StartDeadAnimation;
     }
 
     private void OnDisable()
     {
-        PlayerMove.StartDeadTeleportEvent -= StartDeadAnimation;
+        _slayerStats.PlayerDaadEvent -= StartDeadAnimation;
     }
 
     private void Start()

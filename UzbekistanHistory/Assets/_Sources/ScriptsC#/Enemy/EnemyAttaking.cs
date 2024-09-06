@@ -10,6 +10,9 @@ public class EnemyAttaking : MonoBehaviour
     [SerializeField] private float aggressionRadius = 15;
     [SerializeField] private float timeAttack = 1;
     [SerializeField] private LayerMask layerTarget;
+    [Space]
+    [SerializeField] private WeaponDamageble weaponDamageble;
+    [SerializeField] private WeaponScriptableObject weapon;
 
     public Action StartAttackEvent;
     public Action EndAttackEvent;
@@ -23,6 +26,7 @@ public class EnemyAttaking : MonoBehaviour
     {
         _enemyMove = GetComponent<EnemyMove>();
         _animation = GetComponent<EnemyAnimationController>();
+        weaponDamageble.SetStats(weapon.Damage, weapon.StunTime, layerTarget);
     }
 
     private void FixedUpdate()
@@ -39,10 +43,9 @@ public class EnemyAttaking : MonoBehaviour
     {
         if (_isAttack) return;
 
-
+        _isAttack = true;
         _enemyMove.MoveToPoint(transform.position);
         StartCoroutine(Attack());
-
     }
 
     public IEnumerator Attack()
@@ -50,12 +53,15 @@ public class EnemyAttaking : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
 
         _isAttack = true;
+        weaponDamageble.SetActiveCollision(true);
         StartAttackEvent?.Invoke();
         _enemyMove.SetStopMove(true);
 
-        yield return new WaitForSeconds(_animation.GetStateInfo().length);
+        yield return new WaitForSeconds(1);
+       //yield return new WaitForSeconds(_animation.GetStateInfo().length);
 
         _isAttack = false;
+        weaponDamageble.SetActiveCollision(false);
         EndAttackEvent?.Invoke();
         _enemyMove.SetStopMove(false);
     }
@@ -63,6 +69,7 @@ public class EnemyAttaking : MonoBehaviour
     private void AttackPlayer()
     {
         if (_target == null) return;
+        if (_isAttack) return;
 
         if (Vector3.Distance(transform.position, _target.position) <= attackRadius)
             StartAttack();
@@ -79,7 +86,10 @@ public class EnemyAttaking : MonoBehaviour
         for (int i = 0; i < colliders.Length; i++)
         {
             if (colliders[i])
+            {
                 _target = colliders[i].transform;
+                return;
+            }
         }
     }
 

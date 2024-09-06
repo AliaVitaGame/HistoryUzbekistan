@@ -33,11 +33,13 @@ public class PlayerStats : MonoBehaviour, IUnitHealthStats
     public Action PlayerDaadEvent;
 
     private PlayerMove _playerMove;
+    private PlayerWeaponController _weaponController;
     private PlayerAnimationController _animationController;
 
     private void Start()
     {
         _playerMove = GetComponent<PlayerMove>();
+        _weaponController = GetComponent<PlayerWeaponController>();
         _animationController = GetComponent<PlayerAnimationController>();
 
         RefreshHealthBar();
@@ -80,6 +82,8 @@ public class PlayerStats : MonoBehaviour, IUnitHealthStats
     {
         IsDead = true;
         DeadAudio();
+        _playerMove.SetIsDead(IsDead);
+        _weaponController.SetStop(true);
         PlayerDaadEvent?.Invoke();
     }
 
@@ -93,6 +97,7 @@ public class PlayerStats : MonoBehaviour, IUnitHealthStats
     {
         IsDead = false;
         Health = maxHealth;
+        _playerMove.SetIsDead(IsDead);
         RefreshHealthBar();
         audioFX.transform.SetParent(transform);
     }
