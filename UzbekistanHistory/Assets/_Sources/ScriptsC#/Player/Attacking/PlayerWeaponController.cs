@@ -95,6 +95,9 @@ public class PlayerWeaponController : MonoBehaviour
     private void SetAnimator(RuntimeAnimatorController controller)
         => animationController.SetAnimator(controller);
 
-    public void SetStop(bool stop) 
-        => _isStop = stop;
+    public void SetStop(bool stop)
+    { 
+        _isStop = stop;
+       if(_melee) _melee.SetStop(_isStop);
+    }
 }

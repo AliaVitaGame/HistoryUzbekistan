@@ -47616,6 +47616,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.64972967
       objectReference: {fileID: 0}
+    - target: {fileID: 7694080863168718583, guid: 784abe8b981ea4d4397736b87ce81b18, type: 3}
+      propertyPath: _slayerStats
+      value: 
+      objectReference: {fileID: 8361186145250589784}
     - target: {fileID: 7914303928048174397, guid: 784abe8b981ea4d4397736b87ce81b18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -91.01

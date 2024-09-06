@@ -21,16 +21,24 @@ public class EnemyAttaking : MonoBehaviour
     private Transform _target;
     private EnemyAnimationController _animation;
     private EnemyMove _enemyMove;
+    private EnemyStats _enemyStats;
+
+    private bool _isStop;
+
 
     private void Start()
     {
         _enemyMove = GetComponent<EnemyMove>();
         _animation = GetComponent<EnemyAnimationController>();
+        _enemyStats = GetComponent<EnemyStats>();
         weaponDamageble.SetStats(weapon.Damage, weapon.StunTime, layerTarget);
     }
 
     private void FixedUpdate()
     {
+        if (_isStop) return;
+        if (_enemyStats.IsStunned) return;
+
         if(_target == null)
         {
             if (Physics.CheckSphere(transform.position, aggressionRadius, layerTarget))
@@ -92,6 +100,9 @@ public class EnemyAttaking : MonoBehaviour
             }
         }
     }
+
+    public void SetStop(bool stop)
+        => _isStop = stop;
 
     private void OnDrawGizmosSelected()
     {

@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(EnemyMove))]
+[RequireComponent(typeof(EnemyAttaking))]
 [RequireComponent(typeof(EnemyAnimationController))]
 public class EnemyStats : MonoBehaviour, IUnitHealthStats
 {
@@ -33,11 +34,13 @@ public class EnemyStats : MonoBehaviour, IUnitHealthStats
     public Action<bool> StunEvent;
 
     private EnemyMove _enemyMove;
+    private EnemyAttaking _enemyAttaking;
     private EnemyAnimationController _animationController;
 
     private void Start()
     {
         _enemyMove = GetComponent<EnemyMove>();
+        _enemyAttaking = GetComponent<EnemyAttaking>();
         _animationController = GetComponent<EnemyAnimationController>();
 
         RefreshHealthBar();
@@ -72,16 +75,18 @@ public class EnemyStats : MonoBehaviour, IUnitHealthStats
     {
         IsStunned = true;
         StunEvent?.Invoke(true);
-        Debug.Log(1);
+        _enemyMove.SetStun(true);
         yield return new WaitForSeconds(time);
         StunEvent?.Invoke(false);
         _animationController.HitAnimation(false);
-        Debug.Log(2);
+        IsStunned = false;
+        _enemyMove.SetStun(false);
     }
 
     private void Dead()
     {
         IsDead = true;
+        _enemyAttaking.SetStop(true);
         DeadAudio();
         DaadEvent?.Invoke();
     }

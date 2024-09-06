@@ -9,6 +9,7 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] private float distanceForWalk = 3;
 
     private bool _stopMove;
+    private bool _stun;
     public bool IsRunning { get; private set; }
     public NavMeshAgent Agent { get; private set; }
 
@@ -26,10 +27,16 @@ public class EnemyMove : MonoBehaviour
 
     public void MoveToPoint(Vector3 point)
     {
-        if (_stopMove) return;
+        if (_stopMove || _stun)
+        {
+            Agent.SetDestination(transform.position);
+            return;
+        }
 
         IsRunning = Vector3.Distance(transform.position, point) > distanceForWalk;
         SetSpeed(IsRunning ? speedRun : speedWalk);
         Agent.SetDestination(point);
     }
+
+    public void SetStun(bool stun) => _stun = stun;
 }

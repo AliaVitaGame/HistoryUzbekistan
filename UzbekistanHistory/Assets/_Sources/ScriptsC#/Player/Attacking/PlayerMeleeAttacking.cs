@@ -13,6 +13,8 @@ public class PlayerMeleeAttacking : MonoBehaviour
     private bool _isSelect;
     private int _countAnimationAttack = 5; // 1 - 5
 
+    private bool _isStop;
+
     private void Start()
     {
         _animationController = GetComponent<PlayerAnimationController>();
@@ -22,6 +24,7 @@ public class PlayerMeleeAttacking : MonoBehaviour
     private void Update()
     {
         if (_isSelect == false) return;
+        if (_isStop) return;
 
         if (Input.GetMouseButtonDown(0))
             StartAttack();
@@ -74,6 +77,10 @@ public class PlayerMeleeAttacking : MonoBehaviour
         => _weapon = weapon;
     public GameObject GetPrefab() 
         => _weapon.ItemPrefab;
+
+    public void SetStop(bool stop)
+        => _isStop = stop;
+
     public void SetWeaponObject(GameObject weaponCollider)
     {
         _weaponDamageble = weaponCollider.GetComponent<WeaponDamageble>();

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.7
   m_CustomReflection: {fileID: 8900000, guid: 56a68e301a0ff55469ae441c0112d256, type: 3}
   m_Sun: {fileID: 1046050402}
-  m_IndirectSpecularColor: {r: 0.45918286, g: 0.35779876, b: 0.32154554, a: 0.7}
+  m_IndirectSpecularColor: {r: 0.459217, g: 0.35782298, b: 0.321523, a: 0.7}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -40438,6 +40438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PivotWeapon
       objectReference: {fileID: 0}
+    - target: {fileID: 5915153866463491961, guid: 3cb390f8e102a684bae65366237ed83e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8505034501230004841, guid: 3cb390f8e102a684bae65366237ed83e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.58458
@@ -55486,17 +55490,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 0
   m_Mesh: {fileID: 4300002, guid: 61885c967a7713b4e894cfcac58a47fb, type: 3}
---- !u!114 &1333867829 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8361186145250589784, guid: 920cacfcf3b84cf4098e928fd123b764, type: 3}
-  m_PrefabInstance: {fileID: 7527135973860072078}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29dc1147f2efd1240acccd83d64d9360, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1350908756 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1422540775858056, guid: 912d3b7203793694797475fd103ddc53, type: 3}
@@ -89296,10 +89289,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainObjects
       objectReference: {fileID: 0}
-    - target: {fileID: 137801788358811367, guid: 920cacfcf3b84cf4098e928fd123b764, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5921021528360266580, guid: 920cacfcf3b84cf4098e928fd123b764, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -89340,10 +89329,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8132062656890941076, guid: 920cacfcf3b84cf4098e928fd123b764, type: 3}
-      propertyPath: _slayerStats
-      value: 
-      objectReference: {fileID: 1333867829}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
