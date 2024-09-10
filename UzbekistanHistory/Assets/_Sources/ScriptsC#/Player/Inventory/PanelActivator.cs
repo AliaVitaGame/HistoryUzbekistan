@@ -32,6 +32,8 @@ public class PanelActivator : MonoBehaviour
     {
         if (IsCanOpen() == false) return;
 
+        PlayTime(true);
+        DeactivateAllPanel();
         inventoryPanel.SetActive(active);
         OpenUI(active);
     }
@@ -40,10 +42,10 @@ public class PanelActivator : MonoBehaviour
     {
         if (IsCanOpen() == false) return;
 
+        DeactivateAllPanel();
         pausePanel.SetActive(active);
 
-        if (active) TimeScaleController.Stop();
-        else TimeScaleController.Play();
+        PlayTime(!active);
 
         OpenUI(active);
     }
@@ -61,6 +63,12 @@ public class PanelActivator : MonoBehaviour
     {
         ManagerUI.Instance.OpenUI(active);
         SetActivEmainElements(!active);
+    }
+
+    private void PlayTime(bool active)
+    {
+        if (active) TimeScaleController.Play();
+        else TimeScaleController.Stop();
     }
 
     public void DeactivateAllPanel()

@@ -40,6 +40,7 @@ public class EnemyAnimationController : MonoBehaviour
     private void AnimationStartAttack()
     {
         GetRandomAttackID();
+        SetApplyRootMotion(true);
         animator.SetBool("Combat State", true);
         animator.SetBool($"Attack{_lastAttackID}", true);
     }
@@ -47,11 +48,12 @@ public class EnemyAnimationController : MonoBehaviour
     {
         animator.SetBool("Combat State", false);
         animator.SetBool($"Attack{_lastAttackID}", false);
+        SetApplyRootMotion(false);
     }
 
-    private int GetRandomAttackID() 
+    private int GetRandomAttackID()
     {
-        _lastAttackID = Random.Range(1, _countAnimationAttack + 1); 
+        _lastAttackID = Random.Range(1, _countAnimationAttack + 1);
         return _lastAttackID;
     }
     private void DeadAnimation() => animator.SetTrigger("Dead");
@@ -72,6 +74,9 @@ public class EnemyAnimationController : MonoBehaviour
         animator.SetBool("Move", isMove && enemyMove.IsRunning == false);
         animator.SetBool("Run", isMove && enemyMove.IsRunning);
     }
+
+    public void SetApplyRootMotion(bool active)
+    => animator.applyRootMotion = active;
 
     public AnimatorStateInfo GetStateInfo()
          => animator.GetCurrentAnimatorStateInfo(0);
