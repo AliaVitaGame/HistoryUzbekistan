@@ -109,6 +109,13 @@ public class PlayerMove : MonoBehaviour
         return CharacterController.isGrounded ? speed : speed / 0.7f;
     }
 
+    public void LookAtTarget(Vector3 target)
+    {
+        Vector3 targetPos = target;
+        targetPos.y = transform.position.y;
+        transform.LookAt(targetPos);
+    }
+
     public void SetStopMove(bool stopMove) => _isStopMove = stopMove;
     public void SetIsDead(bool active) => _isDead = active;
 }

@@ -12,7 +12,18 @@ public class PanelActivator : MonoBehaviour
     [SerializeField] private Button activePauseButton;
     [Space]
     [SerializeField] private PlayerStats playerStats;
+    [SerializeField] private GameObject deadPanel;
     [SerializeField] private GameObject[] additionalPanels;
+
+    private void OnEnable()
+    {
+        playerStats.PlayerDaadEvent += ActivePanelDead;
+    }
+
+    private void OnDisable()
+    {
+        playerStats.PlayerDaadEvent -= ActivePanelDead;
+    }
 
     private void Start()
     {
@@ -57,6 +68,13 @@ public class PanelActivator : MonoBehaviour
             if (mainElementsUI[i])
                 mainElementsUI[i].SetActive(active);
         }
+    }
+
+    private void ActivePanelDead()
+    {
+        DeactivateAllPanel();
+        OpenUI(true);
+        deadPanel.SetActive(true);
     }
 
     private void OpenUI(bool active)

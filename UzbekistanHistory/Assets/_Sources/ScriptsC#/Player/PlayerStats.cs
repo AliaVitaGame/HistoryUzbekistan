@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour, IUnitHealthStats
     [SerializeField] private float maxHealth;
     [SerializeField] private EquippedItemPlayer equippedItemPlayer;
     [SerializeField] private ParticleSystem bloodFX;
+    [SerializeField] private HealthBar healthBar;
     [Space]
     [SerializeField] private AudioClip[] damageAudio;
     [SerializeField] private AudioClip[] bloodAudio;
@@ -110,7 +111,7 @@ public class PlayerStats : MonoBehaviour, IUnitHealthStats
 
     private void RefreshHealthBar()
     {
-        // _healthBar.SetHealth(Health, MaxHealth);
+        healthBar.SetHealth(Health, MaxHealth);
     }
 
     private int GetRandomValue(int min, int max)

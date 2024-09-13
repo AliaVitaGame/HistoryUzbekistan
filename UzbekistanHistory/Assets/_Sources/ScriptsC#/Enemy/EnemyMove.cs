@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -36,6 +37,13 @@ public class EnemyMove : MonoBehaviour
         IsRunning = Vector3.Distance(transform.position, point) > distanceForWalk;
         SetSpeed(IsRunning ? speedRun : speedWalk);
         Agent.SetDestination(point);
+    }
+
+    public void LookAtTarget(Vector3 target)
+    {
+        Vector3 targetPos = target;
+        targetPos.y = transform.position.y;
+        transform.LookAt(targetPos);
     }
 
     public void SetStun(bool stun) => _stun = stun;

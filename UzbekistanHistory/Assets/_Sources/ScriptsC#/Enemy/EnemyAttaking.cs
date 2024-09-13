@@ -61,6 +61,7 @@ public class EnemyAttaking : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
 
         _isAttack = true;
+        _enemyMove.LookAtTarget(_target.position);
         weaponDamageble.SetActiveCollision(true);
         StartAttackEvent?.Invoke();
         _enemyMove.SetStopMove(true);

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] private bool notDeleteWithoutParent;
+    [SerializeField] private bool notDeleteWithoutParent = true;
     [SerializeField] private Image healthImage;
 
     private Vector3 _startPosition;
