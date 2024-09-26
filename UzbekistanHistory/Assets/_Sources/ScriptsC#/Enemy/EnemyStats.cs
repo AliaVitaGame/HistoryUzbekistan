@@ -87,6 +87,8 @@ public class EnemyStats : MonoBehaviour, IUnitHealthStats
     {
         IsDead = true;
         _enemyAttaking.SetStop(true);
+        _enemyMove.SetEnabledAgent(false);
+        GetComponent<Collider>().isTrigger = true;
         DeadAudio();
         DaadEvent?.Invoke();
     }
@@ -102,6 +104,7 @@ public class EnemyStats : MonoBehaviour, IUnitHealthStats
         IsDead = false;
         Health = maxHealth;
         RefreshHealthBar();
+        _enemyMove.SetEnabledAgent(true);
         audioFX.transform.SetParent(transform);
     }
 

@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using UnityEngine;
 
 public class ItemHandler : MonoBehaviour
@@ -5,13 +6,28 @@ public class ItemHandler : MonoBehaviour
     [SerializeField] private WeaponScriptableObject item;
     [SerializeField, Range(1, 64)] private int count;
 
-    private void Start()
+    [SerializeField] private GameObject _objectWeapon;
+
+    private void OnValidate()
     {
-        SpawnObject(item.ItemPrefab);
+        if (_objectWeapon == null)
+            SpawnObject(item.ItemPrefab);
     }
 
-    public int GetCount() => count;    
-    public WeaponScriptableObject GetItem() => item;    
+    private void Start()
+    {
+        if (_objectWeapon == null)
+            SpawnObject(item.ItemPrefab);
+    }
 
-    private void SpawnObject(GameObject go) => Instantiate(go, transform);
+    public int GetCount() => count;
+    public WeaponScriptableObject GetItem() => item;
+
+    private GameObject SpawnObject(GameObject go)
+    {
+        if (transform.childCount > 0) _objectWeapon = GetComponentInChildren<WeaponDamageble>().gameObject;
+        else _objectWeapon = Instantiate(go, transform);
+
+        return _objectWeapon;
+    }
 }

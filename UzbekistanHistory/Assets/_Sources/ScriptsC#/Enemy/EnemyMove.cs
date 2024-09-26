@@ -47,4 +47,5 @@ public class EnemyMove : MonoBehaviour
     }
 
     public void SetStun(bool stun) => _stun = stun;
+    public void SetEnabledAgent(bool enabled) => Agent.enabled = enabled;
 }

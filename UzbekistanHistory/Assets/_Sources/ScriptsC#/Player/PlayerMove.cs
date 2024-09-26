@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -8,10 +9,12 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _speedRun = 15;
     [SerializeField] private float _speedRotation = 15;
     [SerializeField] private float _jumpForce = 0.2f;
+    [SerializeField] private float _jumpReload = 1;
     [SerializeField] private float _gravity = 0.5f;
     [SerializeField] private GameObject _character;
     [SerializeField] private Transform _pivotDirection;
 
+    private bool _isJumpReload;
     private bool _isStopMove;
     private float _gravitySpeed;
     private bool _isDead;
@@ -72,7 +75,19 @@ public class PlayerMove : MonoBehaviour
     private void Jump()
     {
         if (_isStopMove) return;
-        if (Input.GetKey(KeyCode.Space) && CharacterController.isGrounded) _gravitySpeed = _jumpForce;
+
+        if (Input.GetKey(KeyCode.Space) && CharacterController.isGrounded && _isJumpReload == false) 
+        { 
+            _gravitySpeed = _jumpForce;
+            StartCoroutine(JumpReload());
+        }
+    }
+
+    public IEnumerator JumpReload()
+    {
+        _isJumpReload = true;
+        yield return new WaitForSeconds(_jumpReload);
+        _isJumpReload = false;
     }
 
     public void SetRotation(Vector3 direction, float speed = Mathf.Infinity)
